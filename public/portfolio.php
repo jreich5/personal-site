@@ -20,11 +20,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/welcome.php"><span id="expand myname">JUSTIN REICH</span></a>
+            <a class="navbar-brand" href="/index.html"><span id="expand myname">JUSTIN REICH</span></a>
           </div>
           <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="/welcome.php" id="expand">Welcome</a></li>
+              <li><a href="/index.html" id="expand">Welcome</a></li>
               <li><a href="/resume.php" id="expand">Resume</a></li>
               <li class="active"><a href="/portfolio.php" id="expand">Portfolio</a></li>
             </ul>
@@ -100,10 +100,8 @@
                         </a>
                     </div>
 
-
                 </div>
-            
-            </div>
+  
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -136,8 +134,11 @@
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-
+          </div>
         </main>
+      </div>
+
+
     <footer class="footer">
       
             <div class="col-md-12 colorthing">

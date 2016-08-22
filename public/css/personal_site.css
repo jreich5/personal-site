@@ -1,57 +1,52 @@
 * {
-	/*border: 1px lime solid;*/
+    /*border: 1px lime solid;*/
 }
 
 html, body, main.container {
-	height: 100%;
+    height: 100%;
+    min-height: 100vh;
 }
 
 main.container {
-	padding-bottom: 0;
+    padding-bottom: 0;
 }
 
 body {
-	background-color: honeydew;
+    background-color: honeydew;
 }
 
 #wrap {
-	min-height: 100%;
+    min-height: 100%;
 }
 
 #resume_margin {
-	margin-left: 400px;
-	margin-right: 400px;
+    margin-left: 400px;
+    margin-right: 400px;
 }
 
 main {
-	padding-top: 80px;
-	overflow:auto;
+    padding-top: 80px;
+    overflow:auto;
   padding-bottom:150px;
 }
 
 
 h1 {
-	text-align: center;
-	margin-bottom: 40px;
-	margin-top: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
 }
 
 p {
-	padding: 0 0 5px 0;
-	font-size: 1.1em;
+    padding: 0 0 5px 0;
+    font-size: 1.1em;
 }
 
 .row img {
-	height: 300px;
-	display:block;
-	margin: auto;
-	padding-bottom: 10px;
-}
-
-#expand:hover {
-		position: relative;
-    display: block;
-    -webkit-animation: expand_move 1000ms;
+    height: 300px;
+    display:block;
+    margin: auto;
+    padding-bottom: 10px;
 }
 @-webkit-keyframes expand_move {
     0%   {}
@@ -60,40 +55,40 @@ p {
 }
 
 #me_pic {
-	float: left;
-	height: 200px;
-	margin-top: 5px;
-	margin-right: 8px;
+    float: left;
+    height: 200px;
+    margin-top: 5px;
+    margin-right: 8px;
 }
 
 #aardvark {
-	position: static;
-	height: 200px;
-	float: right;
+    position: static;
+    height: 200px;
+    float: right;
 }
 
 #codeup_link {
-	color: #779D49; 
+    color: #779D49; 
 }
 
 .navbar {
-	font-family: Tahoma;
-	position: ;
-	padding: 0;
-	margin: 0;
-	letter-spacing: 5px;
+    font-family: Tahoma;
+    position: ;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 5px;
 }
 
 #myname{
-	padding-top: 10px
-	padding-bottom: 10px;
+    padding-top: 10px
+    padding-bottom: 10px;
 }
 
 footer {
-	text-align: center;
-	background-color: #222;
-	padding-bottom: 20px;
-	position: relative;
+    text-align: center;
+    background-color: #222;
+    padding-bottom: 20px;
+    position: relative;
   /*margin-top: -150px;  negative value of footer height 
   height: 150px;*/
   clear:both;
@@ -101,14 +96,14 @@ footer {
 }
 
 #copyright {
-	/*position: relative;*/
-	text-align: center;
-	color: white;
-	/*font-size: .5em*/
-	font-family: times;
-	height: 4em;
-	line-height: 4em;
-	/*top: 10px;*/
+    /*position: relative;*/
+    text-align: center;
+    color: white;
+    /*font-size: .5em*/
+    font-family: times;
+    height: 4em;
+    line-height: 4em;
+    /*top: 10px;*/
 }
 
 
@@ -136,36 +131,36 @@ footer {
 }
 
 a img {
-	z-index: 0;
-	width: 100%;
+    z-index: 0;
+    width: 100%;
 }
 
 .description_mover {
-	background-color: rgba(25,25,25,.7);
-	color: honeydew;
-	z-index: 1;
-	display: inline-block;
-	width: 100%;
-	margin: 0%;
-	position: relative;
-	left: 50%;
-	top: -50%;
-	-webkit-transform: translateY(-104%) translateX(-50%);
-	font-size: 2em;
-	padding: 10px;
+    background-color: rgba(25,25,25,.7);
+    color: honeydew;
+    z-index: 1;
+    display: inline-block;
+    width: 100%;
+    margin: 0%;
+    position: relative;
+    left: 50%;
+    top: -50%;
+    -webkit-transform: translateY(-104%) translateX(-50%);
+    font-size: 2em;
+    padding: 10px;
 }
 
 .hover-fade {
-	opacity: 0;
-	background-color: rgba(25,25,25,.7); 
-	height: 300px;
-	width: 400px;
-	padding: 10px; 
-	display: table-cell;
-	vertical-align: middle;
-	line-height: 20px;
+    opacity: 0;
+    background-color: rgba(25,25,25,.7); 
+    height: 300px;
+    width: 400px;
+    padding: 10px; 
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 20px;
 
-	-webkit-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
    -moz-transition: all .5s ease-out;
    -o-transition: all .5s ease-out;
    -ms-transition: all .5s ease-out;
@@ -173,15 +168,15 @@ a img {
 }
 
 .hover-fade:hover {
-	opacity:1;  /* make things invisible upon start */
+    opacity:1;  /* make things invisible upon start */
 
 }
 
 .placeholder_site {
-	background-image: url("/img/cool_background.jpg");
-	position: relative;
-	width: 400px;
-	height: 300px;
+    background-image: url("/img/cool_background.jpg");
+    position: relative;
+    width: 400px;
+    height: 300px;
   margin: 10px auto; 
   color: honeydew;
 }
@@ -191,13 +186,13 @@ a img {
 }
 
 .content_body {
-	width: 70%;
-	background-color: rgba(26, 26, 26, .7);
-	color: #dddddd;
+    width: 70%;
+    background-color: rgba(26, 26, 26, .7);
+    color: #dddddd;
 }
 
 video#bgvid { 
-		opacity: 1;
+        opacity: 1;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -217,43 +212,57 @@ video#bgvid {
 
 /*====================FORMATTING FOR RESUME PAGE======================*/
 
+#resume hr {
+    margin-top: 0;
+}
+
+#resume.row {
+    text-align: center;
+}
+
 .test {
-	padding-right: 0px;
-	padding-left: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 #resume h6, h5, h4 {
-	float: right;
-	position: relative;
-	bottom: 19px;
-	padding-left: 10px;
+    float: right;
+    position: relative;
+    bottom: 19px;
+    padding-left: 10px;
 }
 
-#resume hr {
-
+.clearfixer {
+    clear: both;
+    padding-top: 20px;
+    text-align: center;
 }
 
 #resume h4 {
-	text-align: right;
+    text-align: right;
+}
+
+#resume h3 {
+    padding-left: 30px;
 }
 
 #resume p {
-	text-align: left;
+    text-align: left;
 }
 
 #resume li {
-/*	float: left;*/
+/*  float: left;*/
 }
 
 #resume a {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 
 }
 
 #resume a:hover {
-	color: ;
-	
+    color: ;
+    
 }
 
 #contact_list ul:after {
@@ -269,42 +278,42 @@ video#bgvid {
 }
 
 #contact_list span  {
-	text-align: center;
+    text-align: center;
 }
 
 /*#moveHigher {
-	bottom: 19px;
+    bottom: 19px;
 }*/
 
 #resume section {
-	padding: 0;
-	margin: 0;
+    padding: 30px;
+
 }
 
 #formattingContactSection {
-	position: relative;
-	text-align: center;
-	font-size: 1.6em;
+    position: relative;
+    text-align: center;
+    font-size: 1.6em;
 }
 
 .spacer {
-	height: 50px;
+    height: 50px;
 }
 
 #moveUp {
-	padding-bottom: 100px;
+    padding-bottom: 100px;
 }
 
 #giveMeSpace {
-	padding-left: 10%; 
-	padding-right: 10%;
+    padding-left: 10%; 
+    padding-right: 10%;
 }
 
 /*==================ANIMATION FOR "WELCOME"========================*/
 
 /* W span */
 span.word:hover > #w {
-		position: relative;
+        position: relative;
     display: inline-block;
     -webkit-animation: w_move 1s;
 }
@@ -316,7 +325,7 @@ span.word:hover > #w {
 
 /* e span */
 span.word:hover > #e {
-		position: relative;
+        position: relative;
     display: inline-block;
     -webkit-animation: e_move 1s;
 }
@@ -328,7 +337,7 @@ span.word:hover > #e {
 
 /* l span */
 span.word:hover > #l {
-		position: relative;
+        position: relative;
     display: inline-block;
     -webkit-animation: l_move 1s;
 }
@@ -340,7 +349,7 @@ span.word:hover > #l {
 
 /* c span */
 span.word:hover > #c {
-		position: relative;
+        position: relative;
     display: inline-block;
     -webkit-animation: c_move 1s;
 }
@@ -353,7 +362,7 @@ span.word:hover > #c {
 /* o span */
 
 span.word:hover > #o {
-		position: relative;
+        position: relative;
     display: inline-block;
     -webkit-animation: o_move 1s;
 }
@@ -365,7 +374,7 @@ span.word:hover > #o {
 
 /* m span */
 span.word:hover > #m {
-		position: relative;
+        position: relative;
     display: inline-block;
     -webkit-animation: m_move 1s;
 }
@@ -377,7 +386,7 @@ span.word:hover > #m {
 
 /* e span */
 span.word:hover > #etwo {
-		position: relative;
+        position: relative;
     display: inline-block;
     -webkit-animation: etwo_move 1s;
 }
@@ -399,81 +408,81 @@ span.word:hover > #etwo {
 /* footer social icons */
 
 ul.social-network {
-	list-style: none;
-	display: inline;
-	margin-left:0 !important;
-	padding: 0;
+    list-style: none;
+    display: inline;
+    margin-left:0 !important;
+    padding: 0;
 }
 ul.social-network li {
-	display: inline;
-	margin: 0 5px;
+    display: inline;
+    margin: 0 5px;
 }
 
 
 /* footer social icons */
 .social-network a.icoRss:hover {
-	background-color: #F56505;
+    background-color: #F56505;
 }
 .social-network a.icoFacebook:hover {
-	background-color:#3B5998;
+    background-color:#3B5998;
 }
 .social-network a.icoTwitter:hover {
-	background-color:#33ccff;
+    background-color:#33ccff;
 }
 .social-network a.icoGoogle:hover {
-	background-color:#BD3518;
+    background-color:#BD3518;
 }
 .social-network a.icoVimeo:hover {
-	background-color:#0590B8;
+    background-color:#0590B8;
 }
 .social-network a.icoLinkedin:hover {
-	background-color:#007bb7;
+    background-color:#007bb7;
 }
 .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
 .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
-	color:#fff;
+    color:#fff;
 }
 a.socialIcon:hover, .socialHoverClass {
-	color:#44BCDD;
+    color:#44BCDD;
 }
 
 .social-circle li a {
-	display:inline-block;
-	position:relative;
-	margin:0 auto 0 auto;
-	-moz-border-radius:50%;
-	-webkit-border-radius:50%;
-	border-radius:50%;
-	text-align:center;
-	width: 30px;
-	height: 30px;
-	font-size:15px;
-	top: 8px;
+    display:inline-block;
+    position:relative;
+    margin:0 auto 0 auto;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius:50%;
+    text-align:center;
+    width: 30px;
+    height: 30px;
+    font-size:15px;
+    top: 8px;
 }
 .social-circle li i {
-	margin:0;
-	line-height:30px;
-	text-align: center;
+    margin:0;
+    line-height:30px;
+    text-align: center;
 }
 
 .social-circle li a:hover i, .triggeredHover {
-	-moz-transform: rotate(360deg);
-	-webkit-transform: rotate(360deg);
-	-ms--transform: rotate(360deg);
-	transform: rotate(360deg);
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	transition: all 0.2s;
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
 }
 .social-circle i {
-	color: #fff;
-	-webkit-transition: all 0.8s;
-	-moz-transition: all 0.8s;
-	-o-transition: all 0.8s;
-	-ms-transition: all 0.8s;
-	transition: all 0.8s;
+    color: #fff;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
 }
 
 .colorthing a {
