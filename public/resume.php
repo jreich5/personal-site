@@ -65,7 +65,7 @@
                             (210) 387-0390
                         </div>
                         <div class="col-lg-4">
-                            <a href="https://github.com/jreich5">github.com/jreich</a>
+                            <a href="https://github.com/jreich5">github.com/jreich5</a>
                         </div>
                     </div>
                 </section>

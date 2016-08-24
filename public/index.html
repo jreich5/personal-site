@@ -8,10 +8,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/personal_site.css">
     <title>Justin Reich : Welcome</title>
+    <style>
+
+        /* Parallax base styles
+        --------------------------------------------- */
+
+        body {
+            background-color: black;
+        }
+
+        .parallax {
+            height: 500px; 
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-perspective: 300px;
+            perspective: 300px;
+        }
+
+        .parallax__group {
+            position: relative;
+            height: 500px; 
+            height: 100vh;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .parallax__layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .parallax__layer--fore {
+            -webkit-transform: translateZ(90px) scale(.7);
+            transform: translateZ(90px) scale(.7);
+            z-index: 1;
+        }
+
+
+        .parallax__layer--deep {
+            -webkit-transform: translateZ(-800px) scale(4);
+            transform: translateZ(-800px) scale(4);
+            z-index: 2;
+        }
+
+        #group3 {
+            z-index: 4;
+        }
+
+        #group4 {
+            z-index: 2; 
+        }
+    
+
+</style>
 </head>
-<body>
+<body id="welcomePage">
+    <!-- NAV BAR -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -32,47 +91,73 @@
             </div><!--/.nav-collapse -->
             </div>
     </nav>
-    <div id="wrap">
-        <main class="container fade-in">
-            
-            <h1>
-                <span class="word">
-                    <span id="w">W</span>
-                    <span id="e">e</span>
-                    <span id="l">l</span>
-                    <span id="c">c</span>
-                    <span id="o">o</span>
-                    <span id="m">m</span>
-                    <span id="etwo">e</span>
-                </span>
-            </h1>
-            <img id="me_pic" src="img/me.jpg">
-            <p>
-                Thank you so much for visiting my personal webpage!
-            </p> 
-            <p>
-                This site features both my current and completed web development projects. As a certified music nerd, you might find some tunes I've been working on too.
-            </p>
-            <p>
-                You can call me The Gallant Aardvark, or Overlord, but most people call me Justin. 
-            </p>
-            <p>
-                As of this writing, I'm working my way through <a id="codeup_link" href="http://codeup.com" target="blank">Codeup</a>, a full-stack web engineering bootcamp based in San Antonio, TX. I'm learning the LAMP+J Stack (Linux, Apache, MySQL, PHP, and some Javascript). As a visual person, I've really enjoyed front-end and UI/UX web development, but I'm eager to start building back-end infrastructure as we shift toward PHP and MySQL later in the bootcamp. 
-            </p>
-            <p>
-                The journey that lead to Codeup and a career in web developement has been a long one. With two degrees in Piano Performance and Pedagogy and eight years teaching piano in South Texas, I've spent most of my professional life building musicians. As I look ahead toward my future in web engineering, I'm reminded of the passion early in my music career as a performer for building and crafting experiences. As web developers, we have the opportunity to influence and code experiences for the people who use and explore the technologies and services we build.
-            </p>
-            <p>
-                Maybe we can build something great together.
-            </p>
-            <p>-Justin Reich</p>
-            <img src="img/aardvark-walking.jpg" id="aardvark">
-        </main>
+    <div class="parallax">
+        <div id="group3" class="parallax__group">
+            <div class="parallax__layer parallax__layer--fore">
+                <!-- SITE CONTENT -->
+                <div id="wrap">
+                    <main class="container fade-in">
+                        
+                        <div class="contentWelcome">
+                            
+                                <h1 id="welcomePageTitle">
+                                    <span class="word">
+                                        <span id="w">J</span>
+                                        <span id="e">U</span>
+                                        <span id="l">S</span>
+                                        <span id="c">T</span>
+                                        <span id="o">I</span>
+                                        <span id="m">N</span>
+                                        <span id="m">&nbsp;</span>
+                                        <span id="w">R</span>
+                                        <span id="e">E</span>
+                                        <span id="l">I</span>
+                                        <span id="c">C</span>
+                                        <span id="o">H</span>
+                                    </span>
+                                </h1>
+                                <img src="img/aardvark-walking.jpg" id="aardvark">
+                                
+                          
+                                <!-- <img id="me_pic" src="img/me.jpg"> -->
+                                <p>
+                                    Thank you so much for visiting my personal webpage!
+                                </p> 
+                                <p>
+                                    This site features both my current and completed development projects. As a certified music nerd, you might find some tunes I've been working on too.
+                                </p>
+                                <p>
+                                    You can call me The Gallant Aardvark, or Overlord, but most people call me Justin. 
+                                </p>
+                                
+                                <p>
+                                    Currently, I'm working my way through <a id="codeup_link" href="http://codeup.com" target="blank">Codeup</a>, a full-stack web engineering bootcamp in San Antonio, TX. I'm learning the LAMP+J Stack (Linux, Apache, MySQL, PHP, and some Javascript). As a visual person, I've really enjoyed front-end and UI/UX web development, but I'm eager to start building back-end infrastructure later in the bootcamp. 
+                                </p>
+                                <p>
+                                    The journey that lead to Codeup and a career in web developement has been a long one. With two degrees in Piano Performance and Pedagogy and eight years teaching piano in South Texas, I've spent most of my professional life building musicians. As I work toward a future in web engineering, I'm reminded of the passion early in my music career as a performer for building and crafting experiences for an audience. The development process is very similar in that through code, we have the opportunity to influence and code experiences for the people who use and explore the technologies and services we build.
+                                </p>
+                                <p>
+                                    Perhaps we can build something great together.
+                                </p>
+                                <p>-Justin Reich</p>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            <div id="group4" class="parallax__group">
+                <div class="parallax__layer parallax__layer--deep">
+                    <img src="img/glacierCool.jpg" id="welcomePageBody">
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    
     <footer class="footer">
             <div class="col-md-12 colorthing">
                 <ul class="social-network social-circle">
-                    <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="#" class="icoGithub" title="Github"><i class="fa fa-github"></i></a></li>
                     <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>

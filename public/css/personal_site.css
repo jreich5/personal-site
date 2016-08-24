@@ -1,3 +1,6 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto|Ubuntu';
+
+
 * {
     /*border: 1px lime solid;*/
 }
@@ -19,17 +22,87 @@ body {
     min-height: 100%;
 }
 
-#resume_margin {
-    margin-left: 400px;
-    margin-right: 400px;
-}
+
 
 main {
     padding-top: 80px;
     overflow:auto;
-  padding-bottom:150px;
+    padding-bottom: 150px;
 }
 
+/*====================FORMATTING FOR WELCOME PAGE======================*/
+
+/*div {
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: relative;
+}
+
+div::after {
+  content: "";
+  background: url('');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}*/
+
+
+.contentWelcome {
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgba(240, 255, 240, .7);
+    padding: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+
+}
+
+
+
+
+#welcomePageBody {
+    position: relative;
+    height: 150%;
+    width: 100vw;
+}
+
+#welcomePage p {
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+
+#welcomePageTitle {
+    color: white;
+    font-size: 4em;
+    font-family: 'Garamond', sans-serif;
+    font-weight: 500;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    background-color: #B53A95;
+    padding: 20px;
+    margin: 0;
+}
+
+
+.welcomeSection {
+    /*color: honeydew;*/
+    margin-bottom: 40px;
+    background-color: rgba(240, 255, 240, .7);
+    padding: 10px;
+}
+
+
+#me_pic {
+    opacity: .1;
+}
 
 h1 {
     text-align: center;
@@ -63,8 +136,8 @@ p {
 
 #aardvark {
     position: static;
-    height: 200px;
-    float: right;
+    width: 100%;
+
 }
 
 #codeup_link {
@@ -74,7 +147,7 @@ p {
 .navbar {
     font-family: Tahoma;
     position: ;
-    padding: 0;
+    padding-top: 0;
     margin: 0;
     letter-spacing: 5px;
 }
@@ -89,10 +162,8 @@ footer {
     background-color: #222;
     padding-bottom: 20px;
     position: relative;
-  /*margin-top: -150px;  negative value of footer height 
-  height: 150px;*/
-  clear:both;
-  padding-top:20px;
+    clear:both;
+    padding-top:20px;
 }
 
 #copyright {
@@ -112,22 +183,22 @@ footer {
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
 .fade-in {
-  opacity:0;  /* make things invisible upon start */
-  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
 
-  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
 
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
 
-  /*-webkit-animation-delay: 0.7s;
-  -moz-animation-delay: 0.7s;
-  animation-delay: 0.7s;*/
+    /*-webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.7s;*/
 }
 
 a img {
@@ -167,6 +238,8 @@ a img {
    transition: all .5s ease-out;
 }
 
+
+
 .hover-fade:hover {
     opacity:1;  /* make things invisible upon start */
 
@@ -177,8 +250,8 @@ a img {
     position: relative;
     width: 400px;
     height: 300px;
-  margin: 10px auto; 
-  color: honeydew;
+    margin: 10px auto; 
+    color: honeydew;
 }
 
 .placeholder_site h4 {
@@ -211,6 +284,12 @@ video#bgvid {
 }
 
 /*====================FORMATTING FOR RESUME PAGE======================*/
+
+
+#resume_margin {
+    margin-left: 400px;
+    margin-right: 400px;
+}
 
 #resume hr {
     margin-top: 0;
@@ -261,7 +340,7 @@ video#bgvid {
 }
 
 #resume a:hover {
-    color: ;
+    color: #62adec;
     
 }
 
@@ -420,8 +499,8 @@ ul.social-network li {
 
 
 /* footer social icons */
-.social-network a.icoRss:hover {
-    background-color: #F56505;
+.social-network a.icoGithub:hover {
+    background-color: #6cc644;
 }
 .social-network a.icoFacebook:hover {
     background-color:#3B5998;
@@ -432,13 +511,10 @@ ul.social-network li {
 .social-network a.icoGoogle:hover {
     background-color:#BD3518;
 }
-.social-network a.icoVimeo:hover {
-    background-color:#0590B8;
-}
 .social-network a.icoLinkedin:hover {
     background-color:#007bb7;
 }
-.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGithub:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
 .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
     color:#fff;
 }
@@ -460,6 +536,12 @@ a.socialIcon:hover, .socialHoverClass {
     top: 8px;
 }
 .social-circle li i {
+    margin:0;
+    line-height:30px;
+    text-align: center;
+}
+
+.social-circle li i.fa-github {
     margin:0;
     line-height:30px;
     text-align: center;
