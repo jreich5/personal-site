@@ -1,0 +1,74 @@
+<!-- simplesimon.dev/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Simon</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/simplesimon.css">
+    <style type="text/css">
+
+        .panel {
+            opacity: .9;
+        }
+
+    </style>
+
+</head>
+<body>
+      
+    <audio loop autoplay id="music">
+        <source type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- BODY CONTENT -->
+    <main class="container">
+        
+        <div class="simonGame">
+            <div class="panel red" id="red1"></div>
+            <div class="panel blue" id="blue2"></div>
+            <div class="panel green" id="green4"></div>
+            <div class="panel yellow" id="yellow3"></div>
+            <div class="corePanel corePanelOuterBlack" id="corePanelOuterBlack">SIMPLE SIMON</div>
+        </div>
+
+        <!-- <button id="round">Coward's Way</button> -->
+            
+        <!-- ***** The Coward's Way Button is quite unstable and can cause glitches in animation and round count ***** -->
+
+        <p id="roundDisplay">Press enter to begin</p>
+
+    </main>
+    <div id="space">
+      <div class="stars"></div>
+      <div class="stars"></div>
+      <div class="stars"></div>
+      <div class="stars"></div>
+      <div class="stars"></div>
+    </div>
+    
+    <!-- jQuery Version 1.11.1 -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- jQuery UI 1.10.3 -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/simplesimon.js"></script>
+
+</body>
+</html>
