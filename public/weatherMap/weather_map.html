@@ -1,0 +1,46 @@
+<!-- codeup.dev/weather_map.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Application</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/weather_map.css">
+</head>
+
+<body class="body">
+
+    <main class="container">
+        
+        <div class="weatherApp ">
+            <h1 class="mainHeader">Weather Map Application</h1>
+            <h6>Drag the map marker to a location for the  3-day forcast.</h6>
+            <div class="weatherData">
+                <h2 class="placeHeader" id="place"></h2>
+                
+                <div class="forcastPanels">
+                    <div class="panel firstPanel" id="panel1"></div>
+                    <div class="panel secondPanel" id="panel2"></div>
+                    <div class="panel thirdPanel" id="panel3"></div>
+                </div>
+            </div>
+            <div class="mapContainer">
+                <div id="map-canvas"></div>
+            </div>
+        </div>
+        <br>
+
+        <input type="text" class="inputField" id="latitude" placeholder="Enter latitude" value="29.428070695992464">
+        <input type="text" class="inputField" id="longitude" placeholder="Enter longitude" value="-98.4891371968231">
+        <button id="updateButton">Update</button>
+
+    </main>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhOmMFQD69je4sN6RQCkf_0TDkLnumJFM"></script>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/weather_map.js"></script>
+
+</body>
+</html>
