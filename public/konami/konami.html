@@ -1,0 +1,277 @@
+<!-- codeup.dev/konami.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami</title>
+<style type="text/css">
+
+        body {
+            position: relative; 
+            width: 100%; 
+            height: 100%; 
+            background-color: #333333;
+        }
+
+        #sun {
+            position: relative; 
+            width:  80px; height: 80px;
+            top: 300px; 
+            left: 700px; 
+            background-color: #ffff00;
+           -moz-border-radius: 40px; 
+            border-radius: 40px;
+            text-align: center; 
+            line-height: 80px;
+        }
+        
+        #mercury {
+            position: absolute; 
+            width: 18px; 
+            height: 18px;
+            top: 335px; 
+            left: 535px; 
+            background-color: #ffaaaa;
+            -moz-border-radius:  9px; 
+            border-radius:  9px;
+            text-align: center; 
+            line-height: 18px;
+        }
+
+        #venus {
+            position: absolute; 
+            width: 36px; 
+            height: 36px;
+            top: 300px; 
+            left: 500px; 
+            background-color: #aaaaff;
+            -moz-border-radius: 18px; 
+            border-radius: 18px;
+            text-align: center; 
+            line-height: 30px;
+        }
+
+        #earth {
+            position: relative; 
+            width: 0px; 
+            height: 0px;
+            top: 200px; 
+            left: 20px; 
+            background-image: url("ryan.png");
+            -moz-border-radius: 15px; 
+            border-radius: 15px;
+            text-align: center; 
+            line-height: 30px; 
+            background-color: #333;
+        }
+      
+  
+        img {
+            height: 300px;
+            position: relative;
+            bottom: 300px;
+            right: 300px;
+            -webkit-animation:spin 2s linear infinite;
+            -moz-animation:spin 2s linear infinite;
+            animation:spin 2s linear infinite;
+        }
+            @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+            @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+            @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+        h1 {
+            position: relative;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <h1> The inner planets of the Solar System</h1>
+    <div id='solar_system'>
+        <div id='sun'>SUN</div>
+        <div id='earth'></div>
+    </div>
+    
+    <script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+    <script type="text/javascript">
+    
+    (function() {   // iife 
+
+        "use strict";
+
+
+// ======================================== FUNCTION DEFINITIONS ========================================
+
+        // Changes background color for the duration of the Konami animation
+        function changeColor() {
+
+            var color = ['green', 'blue', 'black'];
+            var icolor = 0;
+
+            function bgChange() {
+                icolor += 1;
+                icolor %= 3; 
+                $('body').css('background-color', color[icolor]);
+            }
+            var colorIntervalId = setInterval(bgChange, 1800);
+            setTimeout(function() {
+                clearInterval(colorIntervalId);
+                $('body').css('background-color', '#333');
+            }, 20000);
+        }
+
+        // Clears image
+        function noRyan () {
+            $('#earth').html(' ');
+        }
+
+
+// ======================================== ORBIT DEFINITION ========================================
+
+        // Creates orbit periodicity of animation... and makes Ryan even more awesome.
+        function awesomeRyan () {
+
+            $('#earth').html('<img src="/img/ryan.png">');
+
+            (function ( $ ) {
+                jQuery.fn.orbit = function(s, options){
+                    var settings = {
+                                    orbits:    100     // Number of times to go round the orbit e.g. 0.5 = half an orbit
+                                   ,period:    6000  // Number of milliseconds to complete one orbit.
+                                   ,maxfps:    60    // Maximum number of frames per second. Too small gives "flicker", too large uses lots of CPU power
+                                   ,clockwise: true  // Direction of rotation.
+                    };
+                    $.extend(settings, options);  // Merge the supplied options with the default settings.
+                
+                    return(this.each(function(){
+                        var p        = $(this);
+
+        /* First obtain the respective positions */
+
+                        var p_top    = p.css('top' ),
+                            p_left   = p.css('left'),
+                            s_top    = s.css('top' ),
+                            s_left   = s.css('left');
+
+        /* Then get the positions of the centres of the objects */
+
+                        var p_x      = parseInt(p_top ) + p.height()/2,
+                            p_y      = parseInt(p_left) + p.width ()/2,
+                            s_x      = parseInt(s_top ) + s.height()/2,
+                            s_y      = parseInt(s_left) + s.width ()/2;
+
+        /* Find the Adjacent and Opposite sides of the right-angled triangle */
+                        var a        = s_x - p_x,
+                            o        = s_y - p_y;
+
+        /* Calculate the hypotenuse (radius) and the angle separating the objects */
+
+                        var r        = Math.sqrt(a*a + o*o) -500;
+                        var theta    = Math.acos(a / r);
+                        
+        /* Calculate the number of iterations to call setTimeout(), the delay and the "delta" angle to add/subtract */
+
+                        var niters   = Math.ceil(Math.min(4 * r, settings.period, 0.001 * settings.period * settings.maxfps));
+                        var delta    = 2*Math.PI / niters;
+                        var delay    = settings.period  / niters;
+                        if (! settings.clockwise) {delta = -delta;}
+                        niters      *= settings.orbits;
+
+        /* create the "timeout_loop function to do the work */
+
+                        var timeout_loop = function(s, r, theta, delta, iter, niters, delay, settings){
+                            setTimeout(function(){
+
+        /* Calculate the new position for the orbiting element */
+
+                                var w = theta + iter * delta;
+                                var a = r * Math.cos(w);
+                                var o = r * Math.sin(w);
+                                var x = parseInt(s.css('left')) + (s.height()/2) - a;
+                                var y = parseInt(s.css('top' )) + (s.width ()/2) - o;
+
+        /* Set the CSS properties "top" and "left" to move the object to its new position */
+
+                                p.css({top:  (y - p.height()/2),
+                                       left: (x - p.width ()/2)});
+
+        /* Call the timeout_loop function if we have not yet done all the iterations */
+
+                                if (iter < (niters - 1))  timeout_loop(s, r, theta, delta, iter+1, niters, delay, settings);
+                            }, delay);
+                        };
+
+        /* Call the timeout_loop function */
+
+                        timeout_loop(s, r, theta, delta, 0, niters, delay, settings);
+                    }));
+                }
+            }) (jQuery);
+            
+            $('#mercury').orbit($('#sun'  ), {orbits:  8, period:  2000});
+            $('#venus'  ).orbit($('#sun'  ), {orbits:  4, period:  4000});
+            $('#earth'  ).orbit($('#sun'  ), {orbits:  1000, period:  5000});
+        }
+
+
+// ======================================== KONAMI CODE ========================================
+
+        $(document).ready(function() {
+            
+        // Array containing the special input
+        var theOne = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+        var theOneIndex = 0;
+        var toTheOne = [];
+        var timerId;
+        var timers = [];
+
+
+        // Code that fires on key down and adds all input to a large array
+        $(document).keydown(function(event) {
+            
+            for (var i = 0; i < timers.length; i++) {
+                clearTimeout(timers[i]);
+            }
+
+            timers.push(setTimeout(function() {
+                theOneIndex = 0;
+                toTheOne = [];  
+            }, 200));
+
+            console.log(event.keyCode);
+            
+            // Can refactor to for loop
+            if (event.keyCode == theOne[theOneIndex]) {
+                toTheOne.push(event.keyCode);
+                console.log(toTheOne);
+                theOneIndex++;
+                if (theOne.length == toTheOne.length) {
+                    var audio = new Audio('sounds/ryan.mp3');
+                    audio.play();
+                    setTimeout(function() {
+                        awesomeRyan();
+                        changeColor();
+                    }, 6000);
+                    setTimeout(function() {
+                        noRyan();
+                    }, 26000);
+
+                    theOneIndex = 0;
+                    toTheOne = [];  
+                }
+            } else {
+                theOneIndex = 0;
+                toTheOne = [];
+            }  
+        });
+        });
+
+    })() // End of iife
+        
+    </script>
+</body>
+</html>
