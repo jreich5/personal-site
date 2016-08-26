@@ -116,6 +116,7 @@ body#welcomePage {
     position: relative;
 }
 
+
 .coverDiv {
     background-color: honeydew;
     position: relative;
@@ -133,6 +134,23 @@ body#welcomePage {
     margin-top: 80px;
 }
 
+.aka {
+    font-size: .4em;
+    display: block;
+    padding-top: 0px;
+}
+
+.arrow-down {
+    position: absolute; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333;
+    /*margin-top: 40px;*/
+    bottom: 4px;
+    left: 50%;
+    right: 50%;
+}
 
 #welcomePageBody {
     position: relative;
@@ -567,6 +585,19 @@ video#bgvid {
 .center {
     text-align: center;
 }
+
+
+
+/*====================FORMATTING FOR PORTFOLIO PAGE======================*/
+
+.portfolioPage .projectTitle {
+    text-align: center;
+    padding-top: 0;
+    margin-top: 10px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
 
 /*==================ANIMATION FOR "WELCOME"========================*/
 

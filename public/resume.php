@@ -98,7 +98,7 @@
                             </div>
                             <div class="col-md-5">
                                 <dt class="removeMargin">Deployment</dt>
-                                <dd>Vagrant Virtiual Machine development</dd>
+                                <dd>Vagrant Virtual Machine development</dd>
                                 <dd>Digital Ocean VPS</dd>
                                 <dd>WarpSpeed</dd>
                                 <dd>Command Line Interface</dd>
@@ -119,7 +119,7 @@
                             <div class="row clearBoth">
                                 <div class="col-md-12">
                                     <dt class="removeMargin">Codeup | 2016</dt>
-                                    <dd>Codeup is a full-time, four month, full stack web development bootcamp. Course curriculum and keyboard time is focused  on teaching programming fundementals by building web applications and completing smaller in-class exercises. Skills covered include development using LAMP+J, styling with HTML, CSS, and Bootstrap, daily use of version control through Git and Github, and deployment to a VPS using WarpSpeed.</dd>
+                                    <dd>Codeup is a full-time, four month, full stack web development bootcamp. Course curriculum and keyboard time are focused  on teaching programming fundamentals by building web applications and completing smaller in-class exercises. Skills covered include development using LAMP+J, styling with HTML, CSS, and Bootstrap, daily use of version control through Git and Github, and deployment to a VPS using WarpSpeed.</dd>
                                     <dt>University of Texas at San Antonio | 2004 - 2010</dt>
                                     <dd>Master of Music in Piano Pedagogy and Performance (4.0 GPA)</dd>
                                     <dd>Bachelor of Music in Piano Performance, Magna Cum Laude (3.89 GPA)</dd>
@@ -168,11 +168,11 @@
                             <div class="row clearBoth">  
                                 <div class="col-md-12"> 
                                     <dt class="removeMargin">MTNA/TMTA Composition Competition Chair | 2015-2016</dt>
-                                    <dd>Board position for Texas Music Teachers Assocition</dd>
+                                    <dd>Board position for Texas Music Teachers Association</dd>
                                     <dt>San Antonio Music Teachers Association 3rd Vice President - Yearbook Publication | 2012-2016 </dt>
                                     <dd>Served on By-Laws revision commitee, edited layout and published SAMTA annual yearbook</dd>
                                     <dt>San Antonio Piano GUILD Chair | 2011-2014 </dt>
-                                    <dd>Local chair for running the annual National Piano GUILD auditions in San Antonio, TX</dd>
+                                    <dd>Local chair person for the annual National Piano GUILD auditions in San Antonio, TX</dd>
                                     <dt>MTNA@UTSA President | 2009-2010</dt>
                                     <dd>UTSA collegiate chapter of the Music Teachers National Association</dd>
                                 </div>
@@ -193,7 +193,7 @@
                                 <dd>Musical Arts Center of San Antonio, Inc.</dd>
                                 <dt>Placement Representative | 2010</dt>
                                 <dd>Musical Arts Center of San Antonio, Inc.</dd>
-                                <dt>Admistrative Assistant | 2010-2015</dt>
+                                <dt>Administrative Assistant | 2010-2015</dt>
                                 <dd>Musical Arts Center of San Antonio, Inc.</dd>
                             </div>
                             <div class="col-md-5">
@@ -201,7 +201,7 @@
                                 <dd>University of Texas at San Antonio</dd>
                                 <dt>Graduate Research Assistant | 2009-2010</dt>
                                 <dd>Institute of Music Research</dd>
-                                <dt>Admistrative Assistant | 2002-2008</dt>
+                                <dt>Administrative Assistant | 2002-2008</dt>
                                 <dd>Reich Associates, Inc.</dd>
                                 <dt>Library Assistant | 2001</dt>
                                 <dd>Oblate School of Theology</dd>
