@@ -16,13 +16,12 @@ main.container {
 
 body {
     background-color: honeydew;
+
 }
 
 #wrap {
     min-height: 100%;
 }
-
-
 
 main {
     padding-top: 80px;
@@ -30,40 +29,109 @@ main {
     padding-bottom: 150px;
 }
 
-/*====================FORMATTING FOR WELCOME PAGE======================*/
 
-/*div {
-  width: 200px;
-  height: 200px;
-  display: block;
-  position: relative;
+a:hover {
+    color: #62adec;
+    
 }
 
-div::after {
-  content: "";
-  background: url('');
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-}*/
 
+/*====================PARALLAX EFFECT======================*/
+
+  .parallax {
+        height: 500px; 
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-perspective: 300px;
+        perspective: 300px;
+    }
+
+    .parallax__group {
+        position: relative;
+        height: 500px; 
+        height: 100vh;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+    .parallax__layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .parallax__layer--fore {
+        -webkit-transform: translateZ(90px) scale(.7);
+        transform: translateZ(90px) scale(.7);
+        z-index: 1;
+    }
+
+
+    .parallax__layer--deep {
+        -webkit-transform: translateZ(-800px) scale(4);
+        transform: translateZ(-800px) scale(4);
+        z-index: 2;
+    }
+
+    #group3 {
+        z-index: 4;
+    }
+
+    #group4 {
+        z-index: 2; 
+    }
+/*====================FORMATTING FOR WELCOME PAGE======================*/
+
+
+
+
+#welcomePage p {
+    margin-top: 0;
+}
+
+#welcomePage h3 {
+    padding-bottom: 20px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+body#welcomePage {
+    background-color: black;
+}
 
 .contentWelcome {
     margin-left: 100px;
     margin-right: 100px;
     background-color: rgba(240, 255, 240, .7);
     padding: 30px;
-    background-size: 100%;
+    height: 100vh;
     background-repeat: no-repeat;
     display: block;
-
+    margin-top: 100px;
+    border-radius: 10px;
+    position: relative;
 }
 
+.coverDiv {
+    background-color: honeydew;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
 
+#portraitDiv {
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    background-color: rgba(240, 255, 240, 1);
+    display: inline-block;
+    margin-top: 80px;
+}
 
 
 #welcomePageBody {
@@ -94,14 +162,60 @@ div::after {
 
 .welcomeSection {
     /*color: honeydew;*/
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     background-color: rgba(240, 255, 240, .7);
     padding: 10px;
 }
 
+/* WELCOME PAGE IMAGES */
 
 #me_pic {
-    opacity: .1;
+    position: relative;
+    opacity: 1;
+    width: 40%;
+    float: left;
+    border: 3px rgba(240, 255, 240, .5) solid;
+    border-radius: 8px;
+    margin-right: 30px;
+}
+
+#piano_pic {
+    position: relative;
+    opacity: 1;
+    width: 50%;
+    clear: both;
+    border: 3px rgba(240, 255, 240, .5) solid;
+    border-radius: 8px;
+    top: 25px;
+
+}
+
+#keyboard_pic {
+    position: relative;
+    opacity: 1;
+    width: 40%;
+    float: left;
+    clear: both;
+    border: 3px rgba(240, 255, 240, .5) solid;
+    border-radius: 8px;
+    margin-right: 30px;
+
+}
+
+.quote1 {
+    padding-top: 150px;
+}
+
+.quote2 {
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+
+.quote3 {
+    font-size: 5em;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 h1 {
@@ -127,22 +241,15 @@ p {
     100% {}
 }
 
-#me_pic {
-    float: left;
-    height: 200px;
-    margin-top: 5px;
-    margin-right: 8px;
-}
 
 #aardvark {
     position: static;
     width: 100%;
+    height: 100%;
 
 }
 
-#codeup_link {
-    color: #779D49; 
-}
+
 
 .navbar {
     font-family: Tahoma;
@@ -265,7 +372,7 @@ a img {
 }
 
 video#bgvid { 
-        opacity: 1;
+    opacity: 1;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -283,8 +390,111 @@ video#bgvid {
 
 }
 
+
+/* CUSTOM CODE FOR FONT ANIMATION FROM https://css-tricks.com/myth-busting-css-animations-vs-javascript/ */
+
+#customFontAnimation {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+#demo {
+
+  text-align: center;
+  margin-top: 170px;
+}
+#bg {
+    position:relative;
+    overflow:hidden;
+    display:inline-block;
+    width:100%;
+    height:100px;
+    border-radius: 8px;
+}   
+#text {
+    position:absolute;
+    text-align:center;
+    width:100%;
+    height:70px;
+    line-height:68px;
+    font-size: 2.5em;
+}       
+#text span {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing:antialiased;
+    position:relative;
+    display:inline-block;
+
+}    
+#slider {
+  display: inline-block;
+      width: 500px;
+      height:12px;
+      margin:8px 0px 8px 6px;   
+}
+#controls button {
+  width: 80px;
+}
+#controls input {
+      display:inline;
+      padding:2px;
+      margin:2px;
+}
+
+
 /*====================FORMATTING FOR RESUME PAGE======================*/
 
+#resume h6, h5, h4 {
+    float: right;
+    position: relative;
+    bottom: 19px;
+    padding-left: 10px;
+}
+
+.contact {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+#resume h4 {
+    text-align: right;
+}
+
+#resume h3 {
+    padding-left: 30px;
+}
+
+#resume p {
+    text-align: left;
+    font-family: 'Roboto';
+}
+
+
+#printButton {
+   float: right;
+   margin-right: 30px;
+   font-size: 1em;
+   margin-top: 8px;
+}
+
+.resumePage dt {
+    font-family: helvetica;
+    margin-top: 20px;
+}
+
+
+.resumePage dd {
+    font-family: 'Roboto';
+}
+
+.resumePage .removeMargin {
+    margin-top: 0;
+}
 
 #resume_margin {
     margin-left: 400px;
@@ -304,45 +514,8 @@ video#bgvid {
     padding-left: 0px;
 }
 
-#resume h6, h5, h4 {
-    float: right;
-    position: relative;
-    bottom: 19px;
-    padding-left: 10px;
-}
 
-.clearfixer {
-    clear: both;
-    padding-top: 20px;
-    text-align: center;
-}
 
-#resume h4 {
-    text-align: right;
-}
-
-#resume h3 {
-    padding-left: 30px;
-}
-
-#resume p {
-    text-align: left;
-}
-
-#resume li {
-/*  float: left;*/
-}
-
-#resume a {
-    margin: 0;
-    padding: 0;
-
-}
-
-#resume a:hover {
-    color: #62adec;
-    
-}
 
 #contact_list ul:after {
   clear: both;
@@ -360,10 +533,6 @@ video#bgvid {
     text-align: center;
 }
 
-/*#moveHigher {
-    bottom: 19px;
-}*/
-
 #resume section {
     padding: 30px;
 
@@ -372,12 +541,10 @@ video#bgvid {
 #formattingContactSection {
     position: relative;
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.4em;
 }
 
-.spacer {
-    height: 50px;
-}
+
 
 #moveUp {
     padding-bottom: 100px;
@@ -386,6 +553,19 @@ video#bgvid {
 #giveMeSpace {
     padding-left: 10%; 
     padding-right: 10%;
+}
+
+.word {
+    z-index: 20;
+}
+
+.references {
+    float: left;
+    margin-top: 100px;
+}
+
+.center {
+    text-align: center;
 }
 
 /*==================ANIMATION FOR "WELCOME"========================*/
@@ -486,12 +666,18 @@ span.word:hover > #etwo {
 
 /* footer social icons */
 
+
+
+
 ul.social-network {
     list-style: none;
     display: inline;
     margin-left:0 !important;
     padding: 0;
 }
+
+
+
 ul.social-network li {
     display: inline;
     margin: 0 5px;
@@ -570,3 +756,4 @@ a.socialIcon:hover, .socialHoverClass {
 .colorthing a {
  background-color: #D3D3D3;   
 }
+

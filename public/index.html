@@ -11,61 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/personal_site.css">
     <title>Justin Reich : Welcome</title>
-    <style>
-
-        /* Parallax base styles
-        --------------------------------------------- */
-
-        body {
-            background-color: black;
-        }
-
-        .parallax {
-            height: 500px; 
-            height: 100vh;
-            overflow-x: hidden;
-            overflow-y: auto;
-            -webkit-perspective: 300px;
-            perspective: 300px;
-        }
-
-        .parallax__group {
-            position: relative;
-            height: 500px; 
-            height: 100vh;
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-        }
-
-        .parallax__layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-
-        .parallax__layer--fore {
-            -webkit-transform: translateZ(90px) scale(.7);
-            transform: translateZ(90px) scale(.7);
-            z-index: 1;
-        }
-
-
-        .parallax__layer--deep {
-            -webkit-transform: translateZ(-800px) scale(4);
-            transform: translateZ(-800px) scale(4);
-            z-index: 2;
-        }
-
-        #group3 {
-            z-index: 4;
-        }
-
-        #group4 {
-            z-index: 2; 
-        }
-    
+    <style> 
 
 </style>
 </head>
@@ -96,50 +42,82 @@
             <div class="parallax__layer parallax__layer--fore">
                 <!-- SITE CONTENT -->
                 <div id="wrap">
-                    <main class="container fade-in">
+                <div class="coverDiv">
+                    <div id="portraitDiv">      
+                        <h1 id="welcomePageTitle">
+                            <span class="word">
+                                <span id="w">J</span>
+                                <span id="e">U</span>
+                                <span id="l">S</span>
+                                <span id="c">T</span>
+                                <span id="o">I</span>
+                                <span id="m">N</span>
+                                <span id="m">&nbsp;</span>
+                                <span id="w">R</span>
+                                <span id="e">E</span>
+                                <span id="l">I</span>
+                                <span id="c">C</span>
+                                <span id="o">H</span>
+                            </span>
+                        </h1>
+                        <img src="img/aardvark-walking.jpg" id="aardvark">
+                    </div>
+
+                </div>
+                    <main class="container ">
+
+                        <div class="contentWelcome content1">
+                            <img id="me_pic" src="img/me.jpg">
+                            <h3>Welcome!</h3>
+                            <p>
+                                You can call me The Gallant Aardvark, or Overlord, but most people call me Justin. 
+                            </p>
+                            <p>
+                                Thank you for visiting my site!
+                            </p> 
+                            <p>
+                                Here you'll find my current and completed development projects. 
+                                As a certified music nerd, you might find some tunes I've been working on too.
+                            </p>
+                            <img id="piano_pic" src="img/piano.jpg">
                         
-                        <div class="contentWelcome">
-                            
-                                <h1 id="welcomePageTitle">
-                                    <span class="word">
-                                        <span id="w">J</span>
-                                        <span id="e">U</span>
-                                        <span id="l">S</span>
-                                        <span id="c">T</span>
-                                        <span id="o">I</span>
-                                        <span id="m">N</span>
-                                        <span id="m">&nbsp;</span>
-                                        <span id="w">R</span>
-                                        <span id="e">E</span>
-                                        <span id="l">I</span>
-                                        <span id="c">C</span>
-                                        <span id="o">H</span>
-                                    </span>
-                                </h1>
-                                <img src="img/aardvark-walking.jpg" id="aardvark">
+                        </div>
+
+                         <div class="contentWelcome content2">
+                        
+                            <img id="keyboard_pic" src="img/keyboard.jpg">             
+                            <p>
+                                Currently, I'm working my way through <a href="http://codeup.com" target="blank">Codeup</a>, a full-stack web engineering bootcamp in San Antonio, TX. I'm learning the LAMP+J Stack (Linux, Apache, MySQL, PHP, and some Javascript). As a visual person, I've really enjoyed front-end and UI/UX web development, but I'm eager to start building back-end infrastructure later in the bootcamp. 
+                            </p>
+
+                            <div id="customFontAnimation">
+                            <!-- HTML ANIMATION CODE FROM https://css-tricks.com/myth-busting-css-animations-vs-javascript/ -->
+                                <link href='//fonts.googleapis.com/css?family=Signika+Negative:300' rel='stylesheet' type='text/css'>
+                                <div id="demo">
+                                  <div id="bg">
+                                    <div id="text">- Technology is a gift of infinite expressive possibility.</div>
+                                  </div>
+                                </div>
                                 
-                          
-                                <!-- <img id="me_pic" src="img/me.jpg"> -->
-                                <p>
-                                    Thank you so much for visiting my personal webpage!
-                                </p> 
-                                <p>
-                                    This site features both my current and completed development projects. As a certified music nerd, you might find some tunes I've been working on too.
-                                </p>
-                                <p>
-                                    You can call me The Gallant Aardvark, or Overlord, but most people call me Justin. 
-                                </p>
-                                
-                                <p>
-                                    Currently, I'm working my way through <a id="codeup_link" href="http://codeup.com" target="blank">Codeup</a>, a full-stack web engineering bootcamp in San Antonio, TX. I'm learning the LAMP+J Stack (Linux, Apache, MySQL, PHP, and some Javascript). As a visual person, I've really enjoyed front-end and UI/UX web development, but I'm eager to start building back-end infrastructure later in the bootcamp. 
-                                </p>
-                                <p>
-                                    The journey that lead to Codeup and a career in web developement has been a long one. With two degrees in Piano Performance and Pedagogy and eight years teaching piano in South Texas, I've spent most of my professional life building musicians. As I work toward a future in web engineering, I'm reminded of the passion early in my music career as a performer for building and crafting experiences for an audience. The development process is very similar in that through code, we have the opportunity to influence and code experiences for the people who use and explore the technologies and services we build.
-                                </p>
-                                <p>
-                                    Perhaps we can build something great together.
-                                </p>
-                                <p>-Justin Reich</p>
+                                <div id="controls">
+                                  <button style="display: none" id="pause">play</button>
+                                  <button style="display: none" id="restart">restart</button>
+                                </div>
+                            <!-- END OF CODE -->
+                            </div>
+                        </div>
+
+                         <div class="contentWelcome content3">
+                            <h3>Past to Future Past...</h3>
+                            <p>
+                                The journey that lead to Codeup and a career in web developement has been a long one. With two degrees in Piano Performance and Pedagogy and eight years teaching piano in South Texas, I've spent most of my professional life building musicians. As I work toward a future in web engineering, I'm reminded of the passion early in my music career as a performer for building and crafting experiences for an audience. I find the development process to be very similar in that through code, we have the opportunity to create and refine experiences for the people who use and explore the technologies and services we build.
+                            </p>
+                            <p>
+                                Perhaps we can build something great together.
+                            </p>
+                            <p>-Justin Reich</p>
+                            <h1 class="quote2">- Process is the music of code.</h1>
+                            <h1 class="quote3"><&#9835></h1>
                         </div>
                     </main>
                 </div>
@@ -167,6 +145,10 @@
             <div id="copyright">Copyright &copy Justin Reich 2016</div>
     </footer>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.2/TweenMax.min.js'></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/personal-site.js"></script>
 </body>
 </html>
