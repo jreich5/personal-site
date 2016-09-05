@@ -139,11 +139,11 @@
     <footer class="footer">
             <div class="col-md-12 colorthing">
                 <ul class="social-network social-circle">
-                    <li><a href="#" class="icoGithub" title="Github"><i class="fa fa-github"></i></a></li>
-                    <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/jreich5" target="_blank" class="icoGithub" title="Github"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://www.facebook.com/justin.reich1" target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/GallantAardvark" target="_blank" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://plus.google.com/u/0/100964846078024710777" target="_blank" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/justin-reich-b69a22128?trk=nav_responsive_tab_profile_pic" target="_blank" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
                 </ul>               
             </div>
             <div id="copyright">Copyright &copy Justin Reich 2016</div>
