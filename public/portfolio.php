@@ -50,20 +50,21 @@
             <div class="container">
 
                 <div class="row">
-                   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-offset-1 col-lg-4">
-                        <div class="placeholder_site">
+                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-offset-1 col-lg-4">
+                        <div class="placeholder_site placeholder_site1">
                             <a href="/simplesimon.dev/public/index.html" id="port">
                                 <div class="hover-fade">
                                     <h4>Simple Simon Game</h4>
                                     <p>A browser game built with HTML5, CSS, and JavaScript</p>
+
                                 </div>
                             </a>
                         </div>
                     <h3 class="projectTitle">Simple Simon Game</h3>
                     </div>
                     
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-offset-1  col-lg-4">
-                        <div class="placeholder_site">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-offset-1  col-lg-4">
+                        <div class="placeholder_site placeholder_site2">
                             <a href="/calculator/calculator.html" id="port">
                                 <div class="hover-fade">
                                     <h4>Calculator</h4>
@@ -74,8 +75,8 @@
                     <h3 class="projectTitle">Calculator</h3>
                     </div>
 
-                   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-offset-1 col-lg-4">
-                        <div class="placeholder_site">
+                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-offset-1 col-lg-4">
+                        <div class="placeholder_site placeholder_site3">
                             <a href="/weatherMap/weather_map.html" id="port">
                                 <div class="hover-fade">
                                     <h4>Weather App</h4>
@@ -86,8 +87,8 @@
                     <h3 class="projectTitle">Weather Map Application</h3>
                     </div>
 
-                   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-offset-1  col-lg-4">
-                        <div class="placeholder_site">
+                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-offset-1  col-lg-4">
+                        <div class="placeholder_site placeholder_site4">
                             <a href="konami/konami.html" id="port">
                                 <div class="hover-fade">
                                     <h4>Konami Code</h4>

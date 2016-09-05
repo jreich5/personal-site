@@ -2,7 +2,7 @@
 
 
 * {
-    /*border: 1px lime solid;*/
+    border: 1px lime solid;
 }
 
 html, body, main.container {
@@ -383,6 +383,25 @@ a img {
     color: honeydew;
 }
 
+.placeholder_site1 {
+    background-image: url("/img/cool_background.jpg");
+}
+
+.placeholder_site2 {
+    background-image: url("/img/cool_background.jpg");
+}
+
+
+.placeholder_site3 {
+    background-image: url("/img/cool_background.jpg");
+}
+
+
+.placeholder_site4 {
+    background-image: url("/img/cool_background.jpg");
+}
+
+ 
 .placeholder_site h4 {
 
 }
@@ -391,25 +410,6 @@ a img {
     width: 70%;
     background-color: rgba(26, 26, 26, .7);
     color: #dddddd;
-}
-
-video#bgvid { 
-    opacity: 1;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url("/img/background_image.jpg") no-repeat;
-    background-size: cover; 
-
 }
 
 
@@ -459,13 +459,20 @@ video#bgvid {
   width: 80px;
 }
 #controls input {
-      display:inline;
-      padding:2px;
-      margin:2px;
+      display: inline;
+      padding: 2px;
+      margin: 2px;
 }
 
 
 /*====================FORMATTING FOR RESUME PAGE======================*/
+
+body.resumePage img {
+    height: 100%;
+    min-width: 100%;
+    position: fixed;
+    padding: none;
+}
 
 #resume h6, h5, h4 {
     float: right;
@@ -866,7 +873,7 @@ a.socialIcon:hover, .socialHoverClass {
         font-size: 2em;
     }
 
-    #copyright {
+    #welcomePage #copyright {
     text-align: center;
     color: white;
     font-size: 1.5em;
@@ -897,13 +904,17 @@ a.socialIcon:hover, .socialHoverClass {
 
     }
 
+    .resumePage h3 {
+        font-size: 1.5em;
+    }
+
     body.resumePage .content_body {
         width: 100%;
     }
 
     .placeholder_site {
-        width: auto;
-        height: inherit;
+        max-width: 300px;
+        max-height: 250px;
     }
 }
 

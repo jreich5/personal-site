@@ -11,6 +11,7 @@
     <title>Justin Reich : Resume</title>
 </head>
 <body class="resumePage">
+    <img src="/img/background_image.jpg">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -33,11 +34,7 @@
         </div>
     </nav>
     <div id="wrap resume_margin">
-
-        <video loop="true" autoplay id="bgvid">
-            <!-- <source src="/video/sky.MOV" type="video/webm">
-            <source src="/video/sky.MOV" type="video/mp4"> -->
-        </video>
+    <div id="resumeBackgroundImage"></div>
         <main class="container fade-in content_body test">
             <span><a id="printButton" href="http://google.com">PDF Version</a></span>
             
