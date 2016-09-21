@@ -47,10 +47,10 @@
                 </span>
             </h1>
             <h3>Projects</h3>
-            <div class="container">
+            <div class="container-fluid">
 
-                <div class="row">
-                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-offset-1 col-lg-4">
+                <div class="row" class="portfolioCenter">
+                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
                         <div class="placeholder_site placeholder_site1">
                             <a href="/simplesimon.dev/public/index.html" id="port">
                                 <div class="hover-fade">
@@ -63,7 +63,7 @@
                     <h3 class="projectTitle">Simple Simon Game</h3>
                     </div>
                     
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-offset-1  col-lg-4">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
                         <div class="placeholder_site placeholder_site2">
                             <a href="/calculator/calculator.html" id="port">
                                 <div class="hover-fade">
@@ -75,7 +75,7 @@
                     <h3 class="projectTitle">Calculator</h3>
                     </div>
 
-                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-offset-1 col-lg-4">
+                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
                         <div class="placeholder_site placeholder_site3">
                             <a href="/weatherMap/weather_map.html" id="port">
                                 <div class="hover-fade">
@@ -87,7 +87,7 @@
                     <h3 class="projectTitle">Weather Map Application</h3>
                     </div>
 
-                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-offset-1  col-lg-4">
+                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
                         <div class="placeholder_site placeholder_site4">
                             <a href="konami/konami.html" id="port">
                                 <div class="hover-fade">
