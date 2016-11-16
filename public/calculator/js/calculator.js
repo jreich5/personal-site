@@ -76,7 +76,9 @@ function clearCal () {
 
 // Functionality for = button
 function runOperations () {
+    console.log("Run Operations Triggered");
     if (!!rightDisplay.innerHTML == true) { // If statement stops "=" sign from firing if no right operand
+        console.log("!!rightDisplay.innerHTML == true");
         var sign = operatorDisplay.innerHTML;
         var left = parseFloat(leftDisplay.innerHTML);
         var right = parseFloat(rightDisplay.innerHTML);

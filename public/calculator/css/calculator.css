@@ -13,8 +13,10 @@ body {
 }
 
 .heading {
-    background-color: grey;
+    background-color: dimgrey;
     margin-bottom: 20px;
+    font-weight: 800;
+    color: white;
 }
 
 p {
