@@ -27,11 +27,11 @@ var math_it_up = {
 function outputToDisplay (event) {    
     if (operatorDisplay.innerHTML.length == "") {
         if (leftDisplay.innerHTML.length < 9) {
-        leftDisplay.innerHTML += this.innerHTML;
+            leftDisplay.innerHTML += this.innerHTML;
         }
     } else {
         if (rightDisplay.innerHTML.length < 9) {
-        rightDisplay.innerHTML += this.innerHTML;
+            rightDisplay.innerHTML += this.innerHTML;
         }
     }
 }
@@ -49,11 +49,7 @@ function outputToOperator (event) {
 function toDisplayer () {
     for (var i = 0; i < numberButtons.length; i += 1) {
         var button = numberButtons[i];
-        console.log(button);
-        if (button.innerHTML == 1) { // adds space before every concatenated 1 
-        } else {
-            button.addEventListener('click', outputToDisplay);
-        }
+        button.addEventListener('click', outputToDisplay);
     }
 }
 
@@ -87,14 +83,25 @@ function runOperations () {
         var result = (math_it_up[sign](left, right));
         var exponant = 0;
         result = result.toString();
+        if (result.toLowerCase() == 'infinity') {
+            result = 'ERROR';
+        }
         if (result.length > 9) {
-            while (result.length > 2) {
-                result = parseInt(result);
-                result /= 10;
-                exponant += 1;
+            if (parseFloat(result) > 1) {
+                console.log('parseInt(result) should be greater than 1.');
+                while (result.length > 2) {
+                    result = parseInt(result);
+                    result /= 10;
+                    exponant += 1;
+                    result = result.toString();
+                }
+                result = (result + " " + "e" + exponant); 
+            } else {
+                result = parseFloat(result);
+                result = Math.round(result*10000)/10000;
+                console.log("Math.round fired!");
                 result = result.toString();
             }
-            result = (result + " " + "e" + exponant);
         }
         leftDisplay.innerHTML = result;
         operatorDisplay.innerHTML = "";
