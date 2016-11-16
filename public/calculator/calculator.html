@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator!</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/calculator.css">
 </head>
 <body>
@@ -22,49 +23,69 @@
     </audio>
 
     <main>
-        <h1>Javascript Calculator</h1>
-        <h4>With Sound!</h4>
-        <h3>Justin Reich</h3>
-        <div id="calculatorBody">
-            <div id="calculatorDisplays">
-                <div class="displays" id="leftOperandDisplayCSS">
-                    <p id="leftOperandDisplay">- 1</p>
+        <div class="container-fluid heading">
+            <h1 class="text-center">Javascript Calculator</h1>
+            <h4 class="text-center">With Sound!</h4>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <div id="calculatorBody">
+                        <div id="calculatorDisplays">
+                            <div class="displays" id="leftOperandDisplayCSS">
+                                <p id="leftOperandDisplay">- 1</p>
+                            </div>
+                            <div class="displays" id="operatorDisplayCSS">
+                                <p id="operatorDisplay"></p>
+                            </div>
+                            <div class="displays" id="rightOperandDisplayCSS">
+                                <p id="rightOperandDisplay"></p>
+                            </div>
+                        </div>
+                        <div id="calculatorButtons">
+                            <div class="row">
+                                <button onclick="document.getElementById('clickSound').play()" class="number" id="b-1">1</button>
+                                <button onclick="document.getElementById('clickSound').play()" class="number" id="b-2">2</button>
+                                <button onclick="document.getElementById('clickSound').play()" class="number" id="b-3">3</button>
+                                <button onclick="document.getElementById('clickSound').play()" class="operator" id="b-plus">+</button>
+                            </div>
+                            <div class="row">
+                                <button onclick="document.getElementById('clickSound').play()" class="number" id="b-4">4</button>
+                                <button onclick="document.getElementById('clickSound').play()" class="number" id="b-5">5</button>
+                                <button onclick="document.getElementById('clickSound').play()" class="number" id="b-6">6</button>
+                                <button onclick="document.getElementById('clickSound').play()" class="operator" id="b-minus">-</button>
+                            </div>
+                            <div class="row">
+                                <button onclick="document.getElementById('clickSound').play()" class="number" id="b-7">7</button>
+                                <button onclick="document.getElementById('clickSound').play()" class="number" id="b-8">8</button>
+                                <button onclick="document.getElementById('clickSound').play()" class="number" id="b-9">9</button>
+                                <button onclick="document.getElementById('clickSound').play()" class="operator" id="b-times">*</button>
+                            </div>
+                            <div class="row">
+                                <button onclick="document.getElementById('clearSound').play()" class="" id="b-clear">C</button>
+                                <button onclick="document.getElementById('clickSound').play()" class="number" id="b-0">0</button>
+                                <button onclick="document.getElementById('computeSound').play()" class="" id="b-equals">=</button>
+                                <button onclick="document.getElementById('clickSound').play()" class="operator" id="b-divide">/</button>
+                            </div>
+                        </div>        
+                    </div>
                 </div>
-                <div class="displays" id="operatorDisplayCSS">
-                    <p id="operatorDisplay"></p>
-                </div>
-                <div class="displays" id="rightOperandDisplayCSS">
-                    <p id="rightOperandDisplay"></p>
-                </div>
+
+
             </div>
-            <div id="calculatorButtons">
-                <div class="row">
-                    <button onclick="document.getElementById('clickSound').play()" class="number" id="b-1">1</button>
-                    <button onclick="document.getElementById('clickSound').play()" class="number" id="b-2">2</button>
-                    <button onclick="document.getElementById('clickSound').play()" class="number" id="b-3">3</button>
-                    <button onclick="document.getElementById('clickSound').play()" class="operator" id="b-plus">+</button>
-                </div>
-                <div class="row">
-                    <button onclick="document.getElementById('clickSound').play()" class="number" id="b-4">4</button>
-                    <button onclick="document.getElementById('clickSound').play()" class="number" id="b-5">5</button>
-                    <button onclick="document.getElementById('clickSound').play()" class="number" id="b-6">6</button>
-                    <button onclick="document.getElementById('clickSound').play()" class="operator" id="b-minus">-</button>
-                </div>
-                <div class="row">
-                    <button onclick="document.getElementById('clickSound').play()" class="number" id="b-7">7</button>
-                    <button onclick="document.getElementById('clickSound').play()" class="number" id="b-8">8</button>
-                    <button onclick="document.getElementById('clickSound').play()" class="number" id="b-9">9</button>
-                    <button onclick="document.getElementById('clickSound').play()" class="operator" id="b-times">*</button>
-                </div>
-                <div class="row">
-                    <button onclick="document.getElementById('clearSound').play()" class="" id="b-clear">C</button>
-                    <button onclick="document.getElementById('clickSound').play()" class="number" id="b-0">0</button>
-                    <button onclick="document.getElementById('computeSound').play()" class="" id="b-equals">=</button>
-                    <button onclick="document.getElementById('clickSound').play()" class="operator" id="b-divide">/</button>
-                </div>
-            </div>        
+
+
         </div>
     </main>
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script src="js/calculator.js"></script>
 </body>

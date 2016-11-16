@@ -1,42 +1,20 @@
 /* Body Manipulation */
 
 * {
-    margin: 0;
-    padding: 0;
+    line-height: 1.1;
+    /*border: 1px solid lime;*/
 }
 
 body {
-    background-image: url("/img/cartoon-wood.jpg");
+    background-image: url("../img/cartoon-wood.jpg");
     background-color: #CB9C58;
-    background-size: 1000px;
     background-repeat: repeat;
+    color: black;
 }
 
-h1 {
-    position: relative;
-    text-align: center;
-    font-size: 3em;
-    background-color: gray;
-    width: 100%;
-    font-family: sans-serif;
-}
-
-h4 {
-    position: relative;
-    text-align: center;
-    font-size: 1em;
-    background-color: gray;
-    width: 100%;
-    font-family: sans-serif;
-}
-
-h3 {
-    position: relative;
-    text-align: center;
-    font-size: 2em;
-    background-color: gray;
-    width: 100%;
-    font-family: sans-serif;
+.heading {
+    background-color: grey;
+    margin-bottom: 20px;
 }
 
 p {
@@ -55,7 +33,7 @@ p#rightOperandDisplay {
 
 
 button {
-    background-image: url("/img/button-metal.jpg");
+    background-image: url("../img/button-metal.jpg");
     background-size: 800px;
     background-repeat: no-repeat;
     color: black;
@@ -66,13 +44,10 @@ button {
 /* Calculator Placement */
 
 #calculatorBody {
-    background-image: url("/img/metal-background.jpg");
+    background-image: url("../img/metal-background.jpg");
     background-size: 600px;
     display: inline-block;
-    position: absolute;
-    margin: auto;
-    top: 20%;
-    left: 36%;
+    margin: 0 auto;
     border-radius: 15px;
     border: 12px black solid;
 }
@@ -86,16 +61,15 @@ button {
     height: 100px;
     background-color: black;
     color: red;
-    font-size: 3em;
+    font-size: 2.5em;
     text-align: center;
     word-wrap: break-word;
-    border-radius: 15px;  
     font-family: DS-Digital;
 }
 
 .displays {
     overflow: scroll;
-    background-image: url("/img/display.jpg");
+    background-color: #400001;
     background-size: 400px;
     box-shadow: 1px 1px 1px rgba(100,0,0,1);
     border-radius: 15px; 
@@ -104,35 +78,36 @@ button {
 }
 
 #leftOperandDisplayCSS {
-    background-image: url("/img/led.png");
     background-size: 102%;
-    text-align: right;
+    background-color: #400001;
+    text-align: center;
     float: left;
-    max-width: 44%;
-    min-width: 44%
+    max-width: 45%;
+    min-width: 45%;
 }
 
 #operatorDisplayCSS {
+    background-color: #400001;
     float: left;
     width: 10%;
-    margin-left: 5px;
     font-size: 1.3em;
 }
 
 #rightOperandDisplayCSS {
-    background-image: url("/img/led.png");
+    background-color: #400001;
     background-size: 102%;
-    text-align: left;
+    text-align: center;
     float: left;
-    width: 44%;
+    max-width: 45%;
+    min-width: 45%;
 }
 
 
 /* Button Styling */
 
 button {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     font-size: 3em;
     border-radius: 100px;
     margin: 10px;
