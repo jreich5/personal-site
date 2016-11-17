@@ -125,7 +125,6 @@ button {
     /*background-size: contain;*/
     size: 100%;
     opacity: 1;
-
 }
 
 /* Adapted CSS Starfield for background Animation from https://codepen.io/keithclark/pen/zqcEd */
@@ -209,7 +208,6 @@ button {
         /*background-size: contain;*/
         size: 100%;
         opacity: 1;
-
     }
     
 }
@@ -231,7 +229,6 @@ button {
         background-size: contain;
         size: 100%;
         opacity: 1;
-
     }
     
 }
