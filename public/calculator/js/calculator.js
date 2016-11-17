@@ -24,7 +24,8 @@ var math_it_up = {
 // ========Function Definitions========
 
 // Functions to handle button click display outputs and limit number of digits
-function outputToDisplay (event) {    
+function outputToDisplay (event) {
+    console.log("Output to display triggered");    
     if (operatorDisplay.innerHTML.length == "") {
         if (leftDisplay.innerHTML.length < 9) {
             leftDisplay.innerHTML += this.innerHTML;
