@@ -150,7 +150,8 @@
     // ===== Click Functions ===== \\
 
     function redClick () {
-        redLight(true);
+        // redLight(true);
+        redBlink();
         playRed(1);
         hitValue = board.red;
         if (board.red == blinkCounter[0]) {
@@ -163,7 +164,8 @@
         }
     }
     function blueClick () {
-        blueLight(true);
+        // blueLight(true);
+        blueBlink();
         playBlue(1);
         hitValue = board.blue;
         if (board.blue == blinkCounter[0]) {
@@ -176,7 +178,8 @@
         }
     }
     function yellowClick () {
-        yellowLight(true);
+        // yellowLight(true);
+        yellowBlink();
         playYellow(1);
         hitValue = board.yellow;
         if (board.yellow == blinkCounter[0]) {
@@ -189,7 +192,8 @@
         }
     }
     function greenClick () {
-        greenLight(true);
+        // greenLight(true);
+        greenBlink();
         playGreen(1);
         hitValue = board.green;
         if (board.green == blinkCounter[0]) {
@@ -546,5 +550,7 @@
 
     onLoad();
     
+    var vid = document.getElementById("background");
+    vid.playbackRate = 1;
     
 // });
