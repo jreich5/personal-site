@@ -76,30 +76,18 @@
                     </div> 
 
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
-                         <div class="placeholder_site placeholder_site5">
-                             <a target="_blank" href="" id="port">
-                                 <div class="hover-fade">
-                                     <h4> </h4>
-                                     <p></p>
-                                 </div>
-                             </a>
-                         </div>
-                         <h3 class="projectTitle"></h3>
+                        <div class="placeholder_site placeholder_site7">
+                            <a target="_blank" href="http://wutsin-wheels.gallantaardvark.com" id="port">
+                                <div class="hover-fade">
+                                    <h4>Wutsin Wheels</h4>
+                                    <p>An MVC web app built using vanilla PHP with HTML, CSS, and JavaScript</p>
+                                </div>
+                            </a>
+                        </div>
+                        <h3 class="projectTitle">Wutsin Wheels - Craigslist Clone</h3>
                      </div>
                      
                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
-                         <div class="placeholder_site placeholder_site7">
-                             <a target="_blank" href="" id="port">
-                                 <div class="hover-fade">
-                                     <h4>Wutsin Wheels</h4>
-                                     <p>An MVC web app built using vanilla PHP with HTML, CSS, and JavaScript</p>
-                                 </div>
-                             </a>
-                         </div>
-                         <h3 class="projectTitle">Wutsin Wheels - Craigslist Clone</h3>
-                     </div> 
-
-                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
                         <div class="placeholder_site placeholder_site1">
                             <a target="_blank" href="/simplesimon.dev/public/index.html" id="port">
                                 <div class="hover-fade">
@@ -110,6 +98,18 @@
                             </a>
                         </div>
                         <h3 class="projectTitle">Simple Simon Game</h3>
+                     </div> 
+
+                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
+                        <div class="placeholder_site placeholder_site3">
+                            <a target="_blank" href="/weatherMap/weather_map.html" id="port">
+                                <div class="hover-fade">
+                                    <h4>Weather App</h4>
+                                    <p>Built using OpenWeatherMap API and Google Maps API</p>
+                                </div>
+                            </a>
+                        </div>
+                        <h3 class="projectTitle">Weather Map Application</h3>
                     </div>
                     
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
@@ -125,18 +125,6 @@
                     </div>
 
                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
-                        <div class="placeholder_site placeholder_site3">
-                            <a target="_blank" href="/weatherMap/weather_map.html" id="port">
-                                <div class="hover-fade">
-                                    <h4>Weather App</h4>
-                                    <p>Built using OpenWeatherMap API and Google Maps API</p>
-                                </div>
-                            </a>
-                        </div>
-                        <h3 class="projectTitle">Weather Map Application</h3>
-                    </div>
-
-                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
                         <div class="placeholder_site placeholder_site4">
                             <a target="_blank" href="konami/konami.html" id="port">
                                 <div class="hover-fade">
