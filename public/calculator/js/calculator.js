@@ -25,7 +25,6 @@ var math_it_up = {
 
 // Functions to handle button click display outputs and limit number of digits
 function outputToDisplay (event) {
-    console.log("Output to display triggered");    
     if (operatorDisplay.innerHTML.length == "") {
         if (leftDisplay.innerHTML.length < 9) {
             leftDisplay.innerHTML += this.innerHTML;
@@ -77,9 +76,7 @@ function clearCal () {
 
 // Functionality for = button
 function runOperations () {
-    console.log("Run Operations Triggered");
     if (!!rightDisplay.innerHTML == true) { // If statement stops "=" sign from firing if no right operand
-        console.log("!!rightDisplay.innerHTML == true");
         var sign = operatorDisplay.innerHTML;
         var left = parseFloat(leftDisplay.innerHTML);
         var right = parseFloat(rightDisplay.innerHTML);
@@ -91,7 +88,6 @@ function runOperations () {
         }
         if (result.length > 9) {
             if (parseFloat(result) > 1) {
-                console.log('parseInt(result) should be greater than 1.');
                 while (result.length > 2) {
                     result = parseInt(result);
                     result /= 10;
@@ -102,7 +98,6 @@ function runOperations () {
             } else {
                 result = parseFloat(result);
                 result = Math.round(result*10000)/10000;
-                console.log("Math.round fired!");
                 result = result.toString();
             }
         }
@@ -123,19 +118,6 @@ clear.addEventListener('click', clearCal);
 
 // Equals button
 equals.addEventListener('click', runOperations);
-
-// C keyboard input
-addEventListener("keydown", function(event) {
-    if (event.keyCode == 67) { // c for clear
-        clearCal();
-    }
-});
-
-addEventListener("keydown", function(event) {
-    if (event.keyCode == 13) { // enter
-        runOperations();
-    }
-});
 
 
 })()
