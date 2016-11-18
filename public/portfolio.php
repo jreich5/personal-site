@@ -50,9 +50,58 @@
             <div class="container-fluid">
 
                 <div class="row" class="portfolioCenter">
+                   
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
+                        <div class="placeholder_site placeholder_site5">
+                            <a target="_blank" href="https://skillet-ninja.com" id="port">
+                                <div class="hover-fade">
+                                    <h4>Skillet Ninja</h4>
+                                    <p>An MVC cooking app built with Dan Carroll and Daniel Ross for the Codeup capstone project. Technologies used include Laravel, PHP, Bootstrap, Custom CSS, JavaScript, annyang.js, and Web Speech API.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <h3 class="projectTitle">https://skillet-ninja.com</h3>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                        <div class="placeholder_site placeholder_site6">
+                            <a target="_blank" href="https://reddit.gallantaardvark.com/" id="port">
+                                <div class="hover-fade">
+                                    <h4>Reddit Clone</h4>
+                                    <p>An MVC web app built using PHP, Laravel, Javascript, and Twitter Bootstrap</p>
+                                </div>
+                            </a>
+                        </div>
+                        <h3 class="projectTitle">A Reddit Clone</h3>
+                    </div> 
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
+                         <div class="placeholder_site placeholder_site5">
+                             <a target="_blank" href="" id="port">
+                                 <div class="hover-fade">
+                                     <h4> </h4>
+                                     <p></p>
+                                 </div>
+                             </a>
+                         </div>
+                         <h3 class="projectTitle"></h3>
+                     </div>
+                     
+                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                         <div class="placeholder_site placeholder_site7">
+                             <a target="_blank" href="" id="port">
+                                 <div class="hover-fade">
+                                     <h4>Wutsin Wheels</h4>
+                                     <p>An MVC web app built using vanilla PHP with HTML, CSS, and JavaScript</p>
+                                 </div>
+                             </a>
+                         </div>
+                         <h3 class="projectTitle">Wutsin Wheels - Craigslist Clone</h3>
+                     </div> 
+
                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
                         <div class="placeholder_site placeholder_site1">
-                            <a href="/simplesimon.dev/public/index.html" id="port">
+                            <a target="_blank" href="/simplesimon.dev/public/index.html" id="port">
                                 <div class="hover-fade">
                                     <h4>Simple Simon Game</h4>
                                     <p>A browser game built with HTML5, CSS, and JavaScript</p>
@@ -60,43 +109,43 @@
                                 </div>
                             </a>
                         </div>
-                    <h3 class="projectTitle">Simple Simon Game</h3>
+                        <h3 class="projectTitle">Simple Simon Game</h3>
                     </div>
                     
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
                         <div class="placeholder_site placeholder_site2">
-                            <a href="/calculator/calculator.html" id="port">
+                            <a target="_blank" href="/calculator/calculator.html" id="port">
                                 <div class="hover-fade">
                                     <h4>Calculator</h4>
-                                    <p>A retro styled calculator app.</p>
+                                    <p>A retro-styled calculator app.</p>
                                 </div>
                             </a>
                         </div>
-                    <h3 class="projectTitle">Calculator</h3>
+                        <h3 class="projectTitle">Calculator</h3>
                     </div>
 
                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
                         <div class="placeholder_site placeholder_site3">
-                            <a href="/weatherMap/weather_map.html" id="port">
+                            <a target="_blank" href="/weatherMap/weather_map.html" id="port">
                                 <div class="hover-fade">
                                     <h4>Weather App</h4>
                                     <p>Built using OpenWeatherMap API and Google Maps API</p>
                                 </div>
                             </a>
                         </div>
-                    <h3 class="projectTitle">Weather Map Application</h3>
+                        <h3 class="projectTitle">Weather Map Application</h3>
                     </div>
 
                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
                         <div class="placeholder_site placeholder_site4">
-                            <a href="konami/konami.html" id="port">
+                            <a target="_blank" href="konami/konami.html" id="port">
                                 <div class="hover-fade">
                                     <h4>Konami Code</h4>
                                     <p>A fun secret...</p>
                                 </div>
                             </a>
                         </div>
-                    <h3 class="projectTitle">Konami Code</h3>
+                        <h3 class="projectTitle">Konami Code</h3>
                     </div>
 
                 </div>
