@@ -271,22 +271,22 @@
         $(document).keydown(function(e) {
             switch(e.which) {
                 case 37: // left
-                playGreen(1);
+                playGreen(0);
                 greenLight(true);
                 break;
 
                 case 38: // up
-                playRed(1);
+                playRed(0);
                 redLight(true);
                 break;
 
                 case 39: // right
-                playBlue(1);
+                playBlue(0);
                 blueLight(true);
                 break;
 
                 case 40: // down
-                playYellow(1);
+                playYellow(0);
                 yellowLight(true);
                 break;
 
