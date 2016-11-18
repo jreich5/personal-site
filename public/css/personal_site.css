@@ -388,7 +388,39 @@ a img {
     color: honeydew;
 }
 
+.placeholder_site1 {
+    background-image: url("/img/simplesimon.png");
+}
 
+.placeholder_site2 {
+    background-image: url("/img/calculator.png");
+}
+
+
+.placeholder_site3 {
+    background-image: url("/img/weather.png");
+}
+
+
+.placeholder_site4 {
+    background-image: url("/img/konami.jpg");
+}
+
+.placeholder_site5 {
+    background-image: url("/img/skillet-ninja.png");
+}
+
+.placeholder_site6 {
+    background-image: url("/img/reddit.png");
+}
+
+.placeholder_site7 {
+    background-image: url("/img/wutsinWheels.png");
+}
+
+.placeholder_site8 {
+    background-image: url("/img/konami.jpg");
+}
 
  
 .placeholder_site h4 {
