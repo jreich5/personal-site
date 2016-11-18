@@ -1,0 +1,89 @@
+body {
+    background-color: azure;
+}
+
+.mainHeader {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+p {
+    margin: 0;
+}
+
+h3 {
+    padding: 0;
+    margin-top: 15px;
+}
+
+h6 {
+    font-style: italic;
+}
+
+.weatherApp {
+    background: powderblue;
+    margin-top: 0;
+    padding: 0;
+    border-radius: 10px;
+    text-align: center
+}
+
+.weatherData {
+    position: relative;
+    text-align: center;
+}
+
+.coordinants {
+    padding-right: 10px;
+    /*font-style: oblique;*/
+}
+
+.forcastPanels {
+    text-align: center
+    width: 100%;
+    height: inherit;
+    display: inline-block;
+    background-color: lightsteelblue;
+}
+
+.panel {
+    width: 300px;
+    float: left;
+    text-align: center;
+    margin: 0;
+    border: 1px black solid;
+    border-radius: 0;
+    background-color: lightsteelblue;
+
+}
+
+.thirdPanel {
+    margin-right: 0;
+}
+
+.last {
+    padding-bottom: 10px;
+}
+
+.coordinants {
+    font-size: .5em;
+}
+
+.display {
+    height: 100%;
+    width: 1000px;
+}
+
+.mapContainer {
+    width: 100%;
+    height: auto;
+}
+
+#map-canvas {
+    display: inline-block;
+    position: relative;
+    width: 901px;
+    height: 400px;
+    padding-bottom: 30px;
+}
