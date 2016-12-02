@@ -12,27 +12,36 @@
 </head>
 <body class="resumePage">
     <img src="/img/background_image.jpg">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/index.html"><span id="expand">JUSTIN REICH</span></a>
-            </div>
-          <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/index.html" id="expand">Welcome</a></li>
-                <li class="active"><a href="/resume.php" id="expand">Resume</a></li>
-                <li><a href="/portfolio.php" id="expand">Portfolio</a></li>
-            </ul>
-
-          </div><!--/.nav-collapse -->
+    <div class="container">
+        <div class="row">
+            <<!-- div class="col-lg-2"> -->
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/index.html"><span id="expand">JUSTIN REICH</span></a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/index.html" id="expand">Welcome</a></li>
+                            <li class="active"><a href="/resume.php" id="expand">Resume</a></li>
+                            <li><a href="/portfolio.php" id="expand">Portfolio</a></li>
+                            <ul class="social-network social-circle">
+                                <li><a href="https://github.com/jreich5" target="_blank" class="icoGithub" title="Github"> <i class="fa fa-github"> </i> </a> </li>
+                                <li><a href="https://www.linkedin.com/in/justin-reich-b69a22128?trk=nav_responsive_tab_profile_pic" target="_blank" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.facebook.com/justin.reich1" target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            </ul>               
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </nav>
+          <!--   </div> -->
         </div>
-    </nav>
+
+    </div>
     <div id="wrap resume_margin">
     <div id="resumeBackgroundImage"></div>
         <main class="container fade-in content_body test">
@@ -213,16 +222,7 @@
         </main>
     </div>
     <footer class="footer">
-            <div class="col-md-12 colorthing">
-                <ul class="social-network social-circle">
-                    <li><a href="https://github.com/jreich5" target="_blank" class="icoGithub" title="Github"><i class="fa fa-github"></i></a></li>
-                    <li><a href="https://www.facebook.com/justin.reich1" target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com/GallantAardvark" target="_blank" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://plus.google.com/u/0/100964846078024710777" target="_blank" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/justin-reich-b69a22128?trk=nav_responsive_tab_profile_pic" target="_blank" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                </ul>               
-            </div>
-            <div id="copyright">Copyright &copy Justin Reich 2016</div>
+            <div class="copyright">Copyright &copy Justin Reich 2016</div>
     </footer>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
