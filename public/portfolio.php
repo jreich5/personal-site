@@ -56,7 +56,7 @@
                     <span id="e">o</span>
                 </span>
             </h1>
-            <h3>Projects</h3>
+            <h3>Development Projects</h3>
             <div class="container-fluid">
 
                 <div class="row" class="portfolioCenter">

@@ -88,11 +88,11 @@ a:hover {
 
 
 span#expand {
-    margin-left: 95px;
+    margin-left: 57px;
 }
 
 ul.nav.navbar-nav {
-    margin-right: 110px;
+    margin-right: 57px;
 }
 
 
@@ -129,7 +129,7 @@ body#welcomePage {
     background-color: honeydew;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 97vh;
     text-align: center;
 }
 
@@ -420,7 +420,7 @@ a img {
 }
 
 .content_body {
-    width: 70%;
+    width: 80%;
     background-color: rgba(26, 26, 26, .7);
     color: #dddddd;
 }
@@ -955,10 +955,6 @@ a.socialIcon:hover, .socialHoverClass {
 
     .resumePage h3 {
         font-size: 1.5em;
-    }
-
-    body.resumePage .content_body {
-        width: 100%;
     }
 
     .placeholder_site {
