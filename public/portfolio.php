@@ -146,6 +146,18 @@
                         <h3 class="projectTitle">Konami Code</h3>
                     </div>
 
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                        <div class="placeholder_site placeholder_site9">
+                            <a target="_blank" href="snake/public/snake.html" id="port">
+                                <div class="hover-fade">
+                                    <h4>Snake Attack!</h4>
+                                    <p>A game developed using HTML canvas.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <h3 class="projectTitle">Snake Attack!</h3>
+                    </div>
+
                 </div>
 
             </div>

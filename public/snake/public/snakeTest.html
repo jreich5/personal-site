@@ -1,0 +1,589 @@
+<!-- games.dev/snake.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Snake TEST!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style type="text/css">
+
+        main {
+            height: 669px;
+        }
+
+        canvas {
+            background-color: rgb(127,127,255);
+        }
+
+        .startMessage {
+            color: white;
+            position: relative;
+            bottom: 350px;
+            width: 1140px;
+            text-align: center;
+            text-shadow: 2px 2px black;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main class="container">
+        <h1 id="roundCounter" class="pull-right rounds hidden">Round <span id="roundNumber"></span></h1>
+        <h1>SNAKE TEST!</h1>
+        <canvas id="canvas" width="1140" height="600"></canvas>
+        <h2 class="startMessage" id="startMessage">Press Space to Start</h2>
+
+    </main>
+    
+    <!-- jQuery Version 1.11.1 -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+
+    <script>
+        'use strict';
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var startMessage = document.getElementById("startMessage");
+        var canvasColor = "rgb(125,125,255)";
+        var game = true;
+        var canvasHeight = document.getElementById("canvas").getAttribute("height");
+        var canvasWidth = document.getElementById("canvas").getAttribute("width");
+        var foodObject = {};
+        var foodArray = [];
+        var roundCounter = document.getElementById("roundCounter");
+        var centerX = canvas.width / 2;
+        var centerY = canvas.height / 2;
+        var radius = 5;
+        var snakeHeight = 40;
+        var snakeWidth = 40;
+        var speed = 20;
+
+
+        var x = 0; // snake position on x axis
+        var y = 0; // snake position on y axis
+        var snakeColor = "lime";
+        var currentDirection = 'right';
+        var creepDistance = 1;
+        var intervalId;
+        var intervalArray = [];
+        var timeOut = 2000;
+
+        
+
+        var posEndX = 0;
+        var posEndY = 0;
+        var currentEndDirection = 'right';
+        var iterator = 0;
+        var snakePositionHistory = [];
+        var endSnakeData;
+
+
+
+        // size of snake
+        // function fillIt() {
+        //     ctx.beginPath();
+        //     ctx.moveTo(x, y);
+        //     ctx.lineTo(x, y + 40);
+        //     ctx.strokeStyle = "lime";
+        //     ctx.stroke();
+        // } 
+        function fillItUp(color = 'lime') {
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineWidth = 2;
+            ctx.lineTo(x - 40, y);
+            ctx.strokeStyle = color;
+            ctx.stroke();
+
+            
+        } 
+        function fillItDown(color = 'lime') {
+            ctx.beginPath();
+            ctx.moveTo(x - 40, y + 40);
+            ctx.lineWidth = 2;
+            ctx.lineTo(x + 1, y + 40);
+            ctx.strokeStyle = color;
+            ctx.stroke();
+
+            
+        } 
+
+        function fillItLeft(color = 'lime') {
+            ctx.beginPath();
+            ctx.moveTo(x - 40, y + 41);
+            ctx.lineWidth = 2;
+            ctx.lineTo(x - 40, y + 1);
+            ctx.strokeStyle = color;
+            ctx.stroke();
+
+            
+        } 
+        function fillItRight(color = 'lime') {
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineWidth = 2;
+            ctx.lineTo(x, y + 40);
+            ctx.strokeStyle = color;
+            ctx.stroke();
+
+            
+        } 
+
+
+        var direction = {
+            up : function(color = snakeColor) {
+                    if (y > 0) {
+                        
+                        y -= creepDistance;
+                        ctx.fillStyle = color;
+                        fillItUp();
+                        // fillEyes('up');
+                    }    
+                },
+            down : function(color = snakeColor) {
+                    if (y < canvasHeight - snakeWidth) {
+                        
+                        y += creepDistance;
+                        ctx.fillStyle = color;
+                        fillItDown();
+                        // fillEyes('down');
+                    }    
+                },
+            left : function(color = snakeColor) {
+                    if (x > 0) {
+                        
+                        x -= creepDistance;
+                        ctx.fillStyle = color;
+                        fillItLeft();
+                        // fillEyes('left');
+                    }    
+                },
+            right : function(color = snakeColor) {
+                    if (x < canvasWidth - snakeWidth) {
+                        
+                        x += creepDistance;
+                        ctx.fillStyle = color;
+                        fillItRight();
+                        // fillEyes('right');
+                    }    
+                }
+        }
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++ END OF SNAKE DIRECTION and FILL ++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        function fillEndUp(color = canvasColor) {
+            ctx.beginPath();
+            ctx.moveTo(posEndX, posEndY);
+            ctx.lineWidth = 2;
+            ctx.lineTo(posEndX - 40, posEndY);
+            ctx.strokeStyle = color;
+            ctx.stroke();
+        } 
+
+        function fillEndDown(color = canvasColor) {
+            ctx.beginPath();
+            ctx.moveTo(posEndX - 40, posEndY + 40);
+            ctx.lineWidth = 2;
+            ctx.lineTo(posEndX + 1, posEndY + 40);
+            ctx.strokeStyle = color;
+            ctx.stroke();
+        } 
+
+        function fillEndLeft(color = canvasColor) {
+            ctx.beginPath();
+            ctx.moveTo(posEndX - 40, posEndY + 40);
+            ctx.lineWidth = 2;
+            ctx.lineTo(posEndX - 40, posEndY + 1);
+            ctx.strokeStyle = color;
+            ctx.stroke();
+        } 
+
+        function fillEndRight(color = canvasColor) {
+            ctx.beginPath();
+            ctx.moveTo(posEndX, posEndY);
+            ctx.lineWidth = 2;
+            ctx.lineTo(posEndX, posEndY + 40);
+            ctx.strokeStyle = color;
+            ctx.stroke();
+        } 
+
+        var endDirection = {
+            up : function(positionX, positionY) {
+                    if (posEndY > 0) {
+                        
+                        posEndX = positionX;
+                        posEndY = positionY;
+                        ctx.fillStyle = canvasColor;
+                        fillEndUp();
+                        // fillEyes('up');
+                    }    
+                },
+            down : function(positionX, positionY) {
+                    if (posEndY < canvasHeight - snakeWidth) {
+                        
+                        posEndX = positionX;
+                        posEndY = positionY;
+                        ctx.fillStyle = canvasColor;
+                        fillEndDown();
+                        // fillEyes('down');
+                    }    
+                },
+            left : function(positionX, positionY) {
+                    if (posEndX > 0) {
+                        
+                        posEndX = positionX;
+                        posEndY = positionY;
+                        ctx.fillStyle = canvasColor;
+                        fillEndLeft();
+                        // fillEyes('left');
+                    }    
+                },
+            right : function(positionX, positionY) {
+                    if (posEndX < canvasWidth - snakeWidth) {
+                        
+                        posEndX = positionX;
+                        posEndY = positionY;
+                        ctx.fillStyle = canvasColor;
+                        fillEndRight();
+                        // fillEyes('right');
+                    }    
+                }
+        }
+
+
+
+
+
+
+
+        function createContext() {
+            var timeInfo = {};
+            timeInfo.xPlace = x;
+            timeInfo.yPlace = y;
+            timeInfo.direction = currentDirection;
+            return timeInfo;
+        }
+
+        // +++++++++++++++++++++++++++++++ RUNS GAME +++++++++++++++++++++++++++++++ //
+        function nextRound() {
+            creepDistance = 1;
+            ctx.fillStyle = "rgb(125,125,255)";
+            ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+            generateFood();
+            setRound(true);
+            startMessage.className += ' hidden';
+            // window.clearInterval(intervalId);
+            intervalId = setInterval(function(orientation) {
+            
+                iterator ++;
+
+                snakePositionHistory.push(createContext());
+
+                endSnakeData = snakePositionHistory[snakePositionHistory.length - 100];
+
+                orientation = currentDirection;
+                eatFood();
+                switch(orientation) {
+                    case 'up':
+                        direction.up();
+                        break;
+
+                    case 'down':
+                        direction.down();
+                        break;
+
+                    case 'left':
+                        direction.left();
+                        break;
+
+                    case 'right':
+                        direction.right();
+                        break;
+                }
+
+                if (endSnakeData) {
+                    switch(endSnakeData.direction) {
+                        case 'up':
+                            endDirection.up(endSnakeData.xPlace, endSnakeData.yPlace);
+                            break;
+
+                        case 'down':
+                            endDirection.down(endSnakeData.xPlace, endSnakeData.yPlace);
+                            break;
+
+                        case 'left':
+                            endDirection.left(endSnakeData.xPlace, endSnakeData.yPlace);
+                            break;
+
+                        case 'right':
+                            endDirection.right(endSnakeData.xPlace, endSnakeData.yPlace);
+                            break;
+                    }
+                }
+            }, speed);
+            intervalArray.push(intervalId);
+        } 
+
+        function clearTimers() {
+            intervalArray.forEach(function(element, index, array) {
+                window.clearInterval(element);
+            });
+        }
+
+        function stopGame() {
+            creepDistance = 0;
+            snakePositionHistory = [];
+            startMessage.className = "startMessage"; 
+            clearTimers()
+            startState();
+            setRound(false);
+        }
+
+        window.onkeydown = function(e) {
+            if(e.keyCode == 32 && e.target == document.body) {
+                e.preventDefault();
+                return false;
+            }
+        };
+
+        // Event Listeners
+        document.addEventListener('keydown', function(event) {
+            if (event.which === 37) {
+                deriveOrientation('left');
+            }
+            if (event.which === 39) {
+                deriveOrientation('right');
+            }
+            if (event.which === 32) {
+                event.preventDefault();
+                nextRound();
+            }
+            if (event.which === 27) {
+                stopGame();
+            }
+        });
+
+        function setRound(state) {            
+            if (state === true) {
+                roundCounter.className = "pull-right rounds";
+                // roundNumber = Number(roundNumber.innerHTML) + 1;
+                document.getElementById('roundNumber').innerHTML = Number(document.getElementById('roundNumber').innerHTML) + 1;
+            } else {
+                roundCounter.className = "pull-right rounds hidden";
+                document.getElementById('roundNumber').innerHTML = 0;
+            }
+        }
+
+        function deriveOrientation(command) {
+            switch(command) {
+                case 'left':
+                    switch(currentDirection) {
+                        case 'up':
+                            currentDirection = 'left';
+                            break;
+                        case 'down':
+                            currentDirection = 'right';
+                            break;
+                        case 'left':
+                            currentDirection = 'down';
+                            break;
+                        case 'right':
+                            currentDirection = 'up';
+                            break;
+                    }
+                    break;
+                case 'right':
+                    switch(currentDirection) {
+                        case 'up':
+                            currentDirection = 'right';
+                            break;
+                        case 'down':
+                            currentDirection = 'left';
+                            break;
+                        case 'left':
+                            currentDirection = 'up';
+                            break;
+                        case 'right':
+                            currentDirection = 'down';
+                            break;
+                    }
+                    break;
+            }  
+        }
+
+
+        function randomX() {
+            var randomNumber = Math.floor(Math.random() * 490);
+            var randomPlusMinus = Math.floor(Math.random() * 2);
+            if (randomPlusMinus == 1) {
+                return randomNumber;
+            } else {
+                return randomNumber * -1;
+            }
+        }
+
+        function randomY() {
+            var randomNumber = Math.floor(Math.random() * 285);
+            var randomPlusMinus = Math.floor(Math.random() * 2);
+            if (randomPlusMinus == 1) {
+                return randomNumber;
+            } else {
+                return randomNumber * -1;
+            }
+        }
+
+        function fillFood(color1 = 'red', color2 = '#003300', xCoordinate = randomX(), yCoordinate = randomY()) {
+            var randomObject = {};
+            randomObject.randomCoordinateX = xCoordinate;
+            randomObject.randomCoordinateY = yCoordinate;
+            ctx.beginPath();
+            ctx.arc(centerX + randomObject.randomCoordinateX, centerY + randomObject.randomCoordinateY, radius, 0, 2 * Math.PI, false);
+            ctx.fillStyle = color1;
+            ctx.fill();
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = color2;
+            ctx.stroke();
+            return randomObject;
+        }
+
+        function fillOverFood(color, xCoordinate, yCoordinate) {
+            ctx.fillStyle = color;
+            ctx.fillRect(xCoordinate, yCoordinate, 12, 12);
+        }
+
+        function generateFood() {
+            foodArray = [];
+            for (var i = 0; i < 5; i ++) {
+                foodArray.push(fillFood());
+            }
+        }
+
+        
+
+        function eatFood() {
+            foodArray.forEach(function(element, index, array) {
+                // Hit boxes for food
+                switch(currentDirection) {
+                    case 'up':
+                        if (y == centerY + element.randomCoordinateY - 5 && x >= centerX + element.randomCoordinateX - 50 && x <= centerX + element.randomCoordinateX + 5) {
+                            fillOverFood(canvasColor, centerX + element.randomCoordinateX - 6, centerY + element.randomCoordinateY - 6);
+                        }
+                        break;
+                    case 'down':
+                        if (y == centerY + element.randomCoordinateY - 40 && x >= centerX + element.randomCoordinateX - 50 && x <= centerX + element.randomCoordinateX + 5) {
+                            fillOverFood(canvasColor, centerX + element.randomCoordinateX - 6, centerY + element.randomCoordinateY - 6);
+                        }
+                        break;
+                    case 'left':
+                        if (y >= centerY + element.randomCoordinateY - 45 && y <= centerY + element.randomCoordinateY + 5 && x == centerX + element.randomCoordinateX - 5) {
+                            fillOverFood(canvasColor, centerX + element.randomCoordinateX - 6, centerY + element.randomCoordinateY - 6);
+                        }
+                        break;
+                    case 'right':
+                        if (y >= centerY + element.randomCoordinateY - 45 && y <= centerY + element.randomCoordinateY + 5 && x == centerX + element.randomCoordinateX - 40) {
+                            fillOverFood(canvasColor, centerX + element.randomCoordinateX - 6, centerY + element.randomCoordinateY - 6);
+                        }
+                        break;
+                }
+            });
+        }
+                    
+
+        // function fillEyes(direction) {
+        //     switch(direction) {
+        //         case 'up':
+        //             // left eye
+        //             ctx.fillStyle = "black";
+        //             ctx.fillRect((x + snakeWidth * .35), (y + snakeWidth * .25), (snakeWidth * .05), (snakeWidth * .05));
+
+        //             // right eye
+        //             ctx.fillStyle = "black";
+        //             ctx.fillRect(((x + snakeWidth * .65)), (y + snakeWidth * .25), (snakeWidth * .05), (snakeWidth * .05));
+        //             break;
+
+        //         case 'down':
+        //             // left eye
+        //             ctx.fillStyle = "black";
+        //             ctx.fillRect(((x + snakeWidth * .65)), (y + snakeWidth * .75), (snakeWidth * .05), (snakeWidth * .05));
+
+        //             // right eye
+        //             ctx.fillStyle = "black";
+        //             ctx.fillRect((x + snakeWidth * .35), (y + snakeWidth * .75), (snakeWidth * .05), (snakeWidth * .05));
+        //             break;
+
+        //         case 'left':
+        //             // left eye
+        //             ctx.fillStyle = "black";
+        //             ctx.fillRect((x + snakeWidth * .25), (y + snakeWidth * .35), (snakeWidth * .05), (snakeWidth * .05));
+
+        //             // right eye
+        //             ctx.fillStyle = "black";
+        //             ctx.fillRect((x + snakeWidth * .25), (y + snakeWidth * .65) , (snakeWidth * .05), (snakeWidth * .05));
+        //             break;
+
+        //         case 'right':
+        //             // left eye
+        //             ctx.fillStyle = "black";
+        //             ctx.fillRect((x + snakeWidth * .75), (y + snakeWidth * .35), (snakeWidth * .05), (snakeWidth * .05));
+
+        //             // right eye
+        //             ctx.fillStyle = "black";
+        //             ctx.fillRect((x + snakeWidth * .75), (y + snakeWidth * .65) , (snakeWidth * .05), (snakeWidth * .05)); 
+        //             break;
+        //     }
+        // }
+
+
+
+
+        function startState() {
+            x = 0;
+            y = 0;
+            
+            currentDirection = 'right';
+
+            ctx.fillStyle = "rgb(125,125,255)";
+            ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+            ctx.fillStyle = "lime";
+            ctx.fillRect(x, y, snakeWidth, snakeHeight);
+
+            // left eye
+            ctx.fillStyle = "black";
+            ctx.fillRect((x + (snakeWidth * .75)), (y + (snakeWidth * .35)), (snakeWidth * .05), (snakeWidth * .05));
+
+            // right eye
+            ctx.fillStyle = "black";
+            ctx.fillRect((x + (snakeWidth * .75)), (y + (snakeWidth * .65)), (snakeWidth * .05), (snakeWidth * .05));
+        }
+
+
+        // ++++++++++++++++++++++++++++++++++++++++ Procedural Code ++++++++++++++++++++++++++++++++++++++++
+
+
+        // nextRound();
+
+    
+    </script>
+
+</body>
+
+</html>
